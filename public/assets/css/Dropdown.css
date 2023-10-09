@@ -1,0 +1,49 @@
+.Active-d{
+    color: #564fff;
+}
+.Page-parent {
+    position: relative;
+
+    & .Page-child {
+        position: absolute;
+        width: 180px;
+        height: 300px;
+        background: #fff;
+        transform: translateX(-55px);
+        left: 0;
+        top: 45px;
+        padding: 15px 0;
+        text-align: left;
+        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15);
+        z-index: 1;
+
+        
+        & .Child-pages{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+
+            & span{
+                margin: 0.1rem 0rem 0.45rem 1.5rem;
+                & a{
+                    text-decoration: none;
+                    font-size: 16px;
+                    color: rgb(56, 56, 56);
+                    font-weight: 700;
+                    font-family: 'Roboto', sans-serif;
+                    
+                    &:hover{
+                        color: #564fff;
+                    }
+                }
+            }
+        }
+    }
+    /* & .Page:hover + .Page-child{
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+    } */
+}

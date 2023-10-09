@@ -1,11 +1,17 @@
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import React from 'react';
+import { faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 import PageRoutes from './PageRoutes';
-import { pagePaths, navPaths } from '../PagePaths';
+import { navPaths } from '../PagePaths';
+import NavDropdown from '../NavDropdown';
+
 const Navbar = () => {
-  
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+    const handleDropdown = () =>{
+      setIsDropdownOpen(!isDropdownOpen)
+    }
   return (
     <div>
       <nav className="Container">
@@ -16,32 +22,24 @@ const Navbar = () => {
           <div className="Paths">
             <ul>
               {
-                navPaths.map((navPage)=>{
+                navPaths.map((navPage) => {
                   return (
-                    <li>
-                      <NavLink to={navPage.path} className={({isActive})=>(isActive ? 'active' : null)}>{navPage.name}</NavLink>
+                    <li className={({ isActive }) => (isActive ? 'active' : null)}>
+                      <NavLink to={navPage.path} >{navPage.name}</NavLink>
                     </li>
                   )
                 })
               }
-              <li>
-                <div className="Page-parent">
-                  <NavLink to="/pages" className="Page">Pages</NavLink>
-                  <div className='Page-child'>
-                    <ul className='Child-pages'>
-                      {
-                        pagePaths.map((page) => {
-                          return (
-                            <li>
-                              <NavLink to={page.path} className={({isActive})=>( isActive ? 'active-d' : null)}>{page.name}</NavLink>
-                            </li>
-                          )
-                        })
-                      }
-                    </ul>
-                  </div>
-                </div>
+              <li className="Page">
+                  <button onClick={handleDropdown} className={isDropdownOpen ? 'Active-btn' : ''}>
+                    Pages
+                  </button>
+                  <FontAwesomeIcon icon={faCaretUp} className={`caret ${isDropdownOpen ? 'caret-dynamic' : ''}`}/>
               </li>
+              {
+                isDropdownOpen && <NavDropdown />
+              }
+              
             </ul>
           </div>
           <div className='Contact-Info'>
