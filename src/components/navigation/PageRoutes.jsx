@@ -19,9 +19,9 @@ const PageRoutes = () => {
       <Route path='/classes' element={<ClassesPage/>}/>
       <Route path='/aboutus' element={<AboutUs/>}/>
       <Route path='/contact' element={<Contact/>}/>
-      <Route path='/classes/details' element={<ClassDetails/>}/>
-      <Route path='/events/details' element={<EventDetails/>}/>
-      <Route path='/teachers/details' element={<TeacherDetails/>}/>
+      <Route path='/class/details' element={<ClassDetails/>}/>
+      <Route path='/event/details' element={<EventDetails/>}/>
+      <Route path='/teacher/details' element={<TeacherDetails/>}/>
       <Route path='*' element={<NotFound/>}/>
       <Route path='/pages'/>
     </Routes>

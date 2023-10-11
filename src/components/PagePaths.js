@@ -4,7 +4,7 @@ export const pagePaths = [
         name: 'Events'
     },
     {
-        path: '/events/details',
+        path: '/event/details',
         name: 'Event Details'
     },
     {
@@ -12,7 +12,7 @@ export const pagePaths = [
         name: 'Classes'
     },
     {
-        path: '/classes/details',
+        path: '/class/details',
         name: 'Class Details'
     },
     {
@@ -20,7 +20,7 @@ export const pagePaths = [
         name: 'Teachers'
     },
     {
-        path: '/teachers/details',
+        path: '/teacher/details',
         name: 'Teacher Details'
     },
     {

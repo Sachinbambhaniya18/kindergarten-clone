@@ -1,5 +1,5 @@
 .Active-d{
-    color: #564fff;
+    color: #564fff !important;
 }
 .Page-parent {
     position: relative;
@@ -41,9 +41,5 @@
             }
         }
     }
-    /* & .Page:hover + .Page-child{
-        visibility: visible;
-        opacity: 1;
-        transform: translateX(0);
-    } */
 }
+
