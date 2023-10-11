@@ -13,7 +13,7 @@ const Navbar = () => {
       setIsDropdownOpen(!isDropdownOpen)
     }
   return (
-    <div>
+    <div className=''>
       <nav className="Container">
         <div className="Wrapper">
           <div className="Logo">
@@ -37,7 +37,7 @@ const Navbar = () => {
                   <FontAwesomeIcon icon={faCaretUp} className={`caret ${isDropdownOpen ? 'caret-dynamic' : ''}`}/>
               </li>
               {
-                isDropdownOpen && <NavDropdown />
+                isDropdownOpen && <NavDropdown onClose={handleDropdown}/>
               }
               
             </ul>

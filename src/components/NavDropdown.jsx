@@ -2,7 +2,7 @@ import React from 'react'
 import { pagePaths } from './PagePaths';
 import { NavLink } from 'react-router-dom';
 import { motion as m } from 'framer-motion';
-const NavDropdown = () => {
+const NavDropdown = ({ onClose }) => {
     return (
         <m.div 
         className="Page-parent"
