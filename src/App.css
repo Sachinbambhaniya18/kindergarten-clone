@@ -5,7 +5,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-.Not-found{
-    margin-top: 6rem;
+.App{
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
 }

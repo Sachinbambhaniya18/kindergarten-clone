@@ -1,3 +1,77 @@
-.Home-Page{
+.Home-Page {
     margin-top: 6rem;
+}
+
+.Slider-wrapper {
+    background-color: rgb(51, 65, 92);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.Slider-container {
+    margin: 2rem 2rem 3rem 2rem;
+    /* border: 1px solid black; */
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.Slider {
+
+    & h1 {
+        font-size: 48px;
+        line-height: 70px;
+        color: white;
+        font-weight: 500;
+        padding: 10px 0 2px;
+
+        & span {
+            font-size: 70px;
+        }
+    }
+
+    & p {
+        padding: 20px 0 38px;
+        color: white;
+        text-wrap: wrap;
+        text-align: left;
+        line-height: 30px;
+    }
+
+}
+
+& .Video-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid #ffab4a;
+    cursor: pointer;
+    width: 65px;
+    height: 65px;
+    font-size: 25px;
+    color: #ffab4a;
+    border-radius: 50%;
+    transition: all 100ms ease-in-out;
+    &:hover{
+        border: 1px dashed #fff;
+    }
+    &:hover svg{
+        color: #fff !important;
+    }
+
+}
+
+.Slider-image .kids-img {
+    /* height: 100%; */
+    width: 95%;
+    object-fit: cover;
 }

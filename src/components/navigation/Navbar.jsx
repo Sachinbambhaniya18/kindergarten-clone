@@ -9,11 +9,11 @@ import NavDropdown from '../NavDropdown';
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-    const handleDropdown = () =>{
-      setIsDropdownOpen(!isDropdownOpen)
-    }
+  const handleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen)
+  }
   return (
-    <div className=''>
+    <header className='Main-Header'>
       <nav className="Container">
         <div className="Wrapper">
           <div className="Logo">
@@ -31,15 +31,15 @@ const Navbar = () => {
                 })
               }
               <li className="Page">
-                  <button onClick={handleDropdown} className={isDropdownOpen ? 'Active-btn' : ''}>
-                    Pages
-                  </button>
-                  <FontAwesomeIcon icon={faCaretUp} className={`caret ${isDropdownOpen ? 'caret-dynamic' : ''}`}/>
+                <button onClick={handleDropdown} className={isDropdownOpen ? 'Active-btn' : ''}>
+                  Pages
+                </button>
+                <FontAwesomeIcon icon={faCaretUp} className={`caret ${isDropdownOpen ? 'caret-dynamic' : ''}`} />
               </li>
               {
-                isDropdownOpen && <NavDropdown onClose={handleDropdown}/>
+                isDropdownOpen && <NavDropdown onClose={handleDropdown} />
               }
-              
+
             </ul>
           </div>
           <div className='Contact-Info'>
@@ -51,9 +51,9 @@ const Navbar = () => {
             </span>
           </div>
         </div>
+        <PageRoutes />
       </nav>
-      <PageRoutes />
-    </div>
+    </header>
   )
 }
 
