@@ -39,8 +39,8 @@ const Home = () => {
             </div>
             <div className="Slider-image">
               <img src="/assets/svg/Kids.svg" alt="Kids" className='kids-img' />
-              <img src="/assets/svg/TriangleUpsideDown.svg" alt="Triangle" className='Triangle' />
-              <img src="/assets/svg/CrossDecoration.svg" alt="Cross" className='Cross-Decor' />
+              {/* <img src="/assets/svg/TriangleUpsideDown.svg" alt="Triangle" className='Triangle' />
+              <img src="/assets/svg/CrossDecoration.svg" alt="Cross" className='Cross-Decor' /> */}
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { faPlay, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { SliderContext } from '../pages/Home';
 import { items } from './carouselData';
 import { motion as m } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export const CarouselItem = ({ indexValue, keyProp }) => {
     const { setIsPlayerOpen } = useContext(SliderContext)
@@ -39,14 +40,14 @@ export const CarouselItem = ({ indexValue, keyProp }) => {
                 <span>{item.span}</span>
             </h1>
             <p>{item.description}</p>
-            <a href="/" className="Apply-btn">
+            <Link to="/" className="Apply-btn">
                 Apply Now
                 <FontAwesomeIcon icon={faArrowRight} className="Action-align" />
-            </a>
-            <a href="/" className="Learn-btn">
+            </Link>
+            <Link to="/" className="Learn-btn">
                 Learn More
                 <FontAwesomeIcon icon={faArrowRight} className="Action-align" />
-            </a>
+            </Link>
         </m.div>
 
     )

@@ -24,7 +24,31 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
 }
-
+.Slider-Holder{
+    position: relative;
+    
+    &::before{
+        position: absolute;
+        content: url('/assets/svg/CrossDecoration.svg');
+        height: 320px;
+        padding-top: 6rem;
+        width: 50px;
+        left: -55px;
+        top: -15px;
+        z-index: 2;
+        background-color: rgb(51, 65, 92);
+    }
+    &::after{
+        position: absolute;
+        content: url('/assets/svg/TriangleUpsideDown.svg');
+        height: 40px;
+        width: 40px;
+        top: 10rem;
+        left: 33rem;
+        z-index: 2;
+        background-color: rgb(51, 65, 92);
+    }
+}
 .Slider {
     & h1 {
         font-size: 48px;
@@ -83,6 +107,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 4px;
+    
     display: inline-flex;
     z-index: 1;
     border: 1px solid #fff;
@@ -138,11 +163,11 @@
     }
 }
 .right-btn{
-    bottom: -35px;
+    top: 435px;
     left: 140px;
 }
 .left-btn{
-    bottom: -35px;
+    top: 435px;
     left: 75px;
 }
 
@@ -151,7 +176,7 @@
     width: 95%;
     object-fit: cover;
 }
-.Slider-image{
+/* .Slider-image{
     position: relative;
     & .Triangle{
         position: absolute;
@@ -163,4 +188,4 @@
         left: -41.5rem;
         top: 9.3rem;
     }
-}
+} */
