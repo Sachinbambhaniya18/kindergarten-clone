@@ -1,41 +1,52 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import React, { useState, createContext } from 'react';
+import Carousel from '../carousel/Carousel';
+import VideoPlayer from '../modals/VideoPlayer';
+import { items } from '../carousel/carouselData';
+
+export const SliderContext = createContext()
+
 const Home = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPlayerOpen, setIsPlayerOpen] = useState(false);
+  const [key, setKey] = useState(0)
+
+
+  const nextIndex = () => {
+    setCurrentIndex((currentIndex + 1) % items.length)
+    setKey((prev) => prev + 1)
+  }
+  const prevIndex = () => {
+    setCurrentIndex((currentIndex - 1 + items.length) % items.length)
+    setKey((prev) => prev - 1)
+  }
+
+  const handleVideoClose = () => {
+    setIsPlayerOpen(false);
+    document.body.classList.remove('Scroll-lock')
+  }
+  const item = items[currentIndex]
+
   return (
-    <div className='Home-Page'>
-      <div className="Slider-wrapper">
-        <div className="Slider-container">
-          <div className="Slider">
-            <button className='Video-modal'>
-              <FontAwesomeIcon icon={faPlay} size='l'/>
-            </button>
-              <h1>We Are Child Care<br/><span>Professional</span></h1>
-              <p>You must know that there is nothing higher and stronger and more wholesome and good for life in the future than some good memory,  specially a memory of childhood.</p>
-              <a href="/" className="User-actions">
-                Apply Now
-                <FontAwesomeIcon icon={faArrowRight} />
-              </a>
-              <a href="/" className="User-actions">
-                Learn More
-                <FontAwesomeIcon icon={faArrowRight} />
-              </a>
-              <button className="Directional-btn">
-              <FontAwesomeIcon icon={faArrowLeft} />
-              </button>
-              <button className="Directional-btn">
-              <FontAwesomeIcon icon={faArrowRight} />
-              </button>
-          </div>
-          <div className="Slider-image">
-            <img src="/assets/svg/Kids.svg" alt="Kids" className='kids-img'/>
-            <img src="" alt="" />
-            <img src="" alt="" />
+    <SliderContext.Provider value={{ key, isPlayerOpen, setIsPlayerOpen, currentIndex, setCurrentIndex }}>
+      <div className='Home-Page'>
+        {
+          isPlayerOpen && <VideoPlayer onClose={handleVideoClose} itemLink={item.link} />
+        }
+        <div className="Slider-wrapper">
+          <div className="Slider-container">
+            <div className="Slider-Holder">
+              <Carousel nextIndex={nextIndex} prevIndex={prevIndex} />
+            </div>
+            <div className="Slider-image">
+              <img src="/assets/svg/Kids.svg" alt="Kids" className='kids-img' />
+              <img src="/assets/svg/TriangleUpsideDown.svg" alt="Triangle" className='Triangle' />
+              <img src="/assets/svg/CrossDecoration.svg" alt="Cross" className='Cross-Decor' />
+            </div>
           </div>
         </div>
+
       </div>
-      
-    </div>
+    </SliderContext.Provider>
   )
 }
 

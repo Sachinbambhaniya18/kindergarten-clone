@@ -7,22 +7,23 @@
         position: fixed;
         height: 95px;
         width: 100vw;
+        z-index: 5;
         top: 0;
         background-color: #fff;
         box-shadow: 0 6px 40px 0 rgba(0, 0, 0, .2);
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
 
         & .Logo h1 {
             color: #564fff;
             font-family: 'Pacifico', cursive;
             font-weight: 500;
             font-size: 28px;
+            margin-left: 1rem;
         }
 
         & .Paths {
-            margin-inline: 5rem;
 
             & ul {
                 display: flex;
@@ -69,11 +70,12 @@
 
         & .Contact-Info {
             position: relative;
-            margin-left: 4.5rem;
             border-radius: 4px;
             box-shadow: 0 6px 12px 0 rgba(17, 13, 149, .3);
             background-color: #564fff;
             color: #fff;
+            margin-right: 1.9rem;
+            margin-left: 1.7rem;
             padding: 12px 15px;
             font-family: 'Roboto', sans-serif;
             cursor: pointer;
@@ -115,7 +117,7 @@
 }
 .caret{
     position: absolute;
-    top: 0.25rem;
+    top: 0.1rem;
 }
 
 .caret-dynamic{

@@ -9,8 +9,9 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-bottom: 5rem;
 }
 
 .Slider-container {
@@ -25,13 +26,13 @@
 }
 
 .Slider {
-
     & h1 {
         font-size: 48px;
         line-height: 70px;
         color: white;
         font-weight: 500;
         padding: 10px 0 2px;
+        text-wrap: wrap;
 
         & span {
             font-size: 70px;
@@ -44,6 +45,7 @@
         text-wrap: wrap;
         text-align: left;
         line-height: 30px;
+
     }
 
 }
@@ -69,9 +71,96 @@
     }
 
 }
+.Apply-btn,
+.Learn-btn{
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    background: transparent;
+    width: 148px;
+    height: 50px;
+    padding-right: 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    display: inline-flex;
+    z-index: 1;
+    border: 1px solid #fff;
+
+    & .Action-align{
+        position: absolute;
+        left: 6.9rem;
+        transition: all 150ms ease-in-out;
+    }
+
+    &::after{
+        position: absolute;
+        content: '';
+        inset: 0;
+        background-color: #564fff;
+        border-radius: 3px;
+        z-index: -1;
+        width: 0%;
+        /* transform-origin: left; */
+        transition: all 200ms ease-in-out;
+    }
+    &:hover::after{
+        width: 100%;
+    }
+    &:hover{
+        border: 1px solid #564fff;
+    }
+    &:hover .Action-align{
+        left: 7.2rem;
+    }
+}
+.Learn-btn{
+    margin-left: 30px
+}
+.Directional-btn{
+    position: absolute;
+    margin: 0 -10px;
+    background: #242d3e;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #ff564f;
+    }
+}
+.right-btn{
+    bottom: -35px;
+    left: 140px;
+}
+.left-btn{
+    bottom: -35px;
+    left: 75px;
+}
 
 .Slider-image .kids-img {
     /* height: 100%; */
     width: 95%;
     object-fit: cover;
+}
+.Slider-image{
+    position: relative;
+    & .Triangle{
+        position: absolute;
+        left: -3rem;
+        top: 16rem;
+    }
+    & .Cross-Decor{
+        position: absolute;
+        left: -41.5rem;
+        top: 9.3rem;
+    }
 }

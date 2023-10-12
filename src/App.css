@@ -9,3 +9,6 @@
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
 }
+.Scroll-lock{
+    overflow: hidden;
+}
