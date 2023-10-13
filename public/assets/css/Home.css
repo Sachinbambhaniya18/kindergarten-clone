@@ -2,6 +2,7 @@
     margin-top: 6rem;
 }
 
+/* Section - 1 */
 .Slider-wrapper {
     background-color: rgb(51, 65, 92);
     width: 100vw;
@@ -11,7 +12,7 @@
     flex-wrap: wrap;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    margin-bottom: 5rem;
+    /* margin-bottom: 5rem; */
 }
 
 .Slider-container {
@@ -24,10 +25,11 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
 }
-.Slider-Holder{
+
+.Slider-Holder {
     position: relative;
-    
-    &::before{
+
+    &::before {
         position: absolute;
         content: url('/assets/svg/CrossDecoration.svg');
         height: 320px;
@@ -38,7 +40,8 @@
         z-index: 2;
         background-color: rgb(51, 65, 92);
     }
-    &::after{
+
+    &::after {
         position: absolute;
         content: url('/assets/svg/TriangleUpsideDown.svg');
         height: 40px;
@@ -48,6 +51,7 @@
         z-index: 2;
     }
 }
+
 .Slider {
     & h1 {
         font-size: 48px;
@@ -86,16 +90,19 @@
     color: #ffab4a;
     border-radius: 50%;
     transition: all 100ms ease-in-out;
-    &:hover{
+
+    &:hover {
         border: 1px dashed #fff;
     }
-    &:hover svg{
+
+    &:hover svg {
         color: #fff !important;
     }
 
 }
+
 .Apply-btn,
-.Learn-btn{
+.Learn-btn {
     position: relative;
     text-decoration: none;
     color: #fff;
@@ -106,18 +113,18 @@
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    
+
     display: inline-flex;
     z-index: 1;
     border: 1px solid #fff;
 
-    & .Action-align{
+    & .Action-align {
         position: absolute;
         left: 6.9rem;
         transition: all 150ms ease-in-out;
     }
 
-    &::after{
+    &::after {
         position: absolute;
         content: '';
         inset: 0;
@@ -128,20 +135,25 @@
         /* transform-origin: left; */
         transition: all 200ms ease-in-out;
     }
-    &:hover::after{
+
+    &:hover::after {
         width: 100%;
     }
-    &:hover{
+
+    &:hover {
         border: 1px solid #564fff;
     }
-    &:hover .Action-align{
+
+    &:hover .Action-align {
         left: 7.2rem;
     }
 }
-.Learn-btn{
-    margin-left: 30px
+
+.Learn-btn {
+    margin-left: 30px;
 }
-.Directional-btn{
+
+.Directional-btn {
     position: absolute;
     margin: 0 -10px;
     background: #242d3e;
@@ -157,34 +169,206 @@
     align-items: center;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
         background-color: #ff564f;
     }
 }
-.right-btn{
-    top: 435px;
+
+.right-btn {
+    top: 445px;
     left: 140px;
 }
-.left-btn{
-    top: 435px;
+
+.left-btn {
+    top: 445px;
     left: 75px;
 }
 
 .Slider-image .kids-img {
-    /* height: 100%; */
     width: 95%;
     object-fit: cover;
 }
-/* .Slider-image{
+
+/* Section - 2 */
+
+.Slick-wrapper {
+    margin-top: 100px;
     position: relative;
-    & .Triangle{
+    margin-bottom: 100px;
+
+    &::after {
         position: absolute;
-        left: -3rem;
-        top: 16rem;
+        content: url('/assets/svg/HollowCircle.svg');
+        height: 100px;
+        width: 100px;
+        right: 35px;
+        top: 40%;
+        z-index: -1;
     }
-    & .Cross-Decor{
+}
+
+.Slick-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Slick-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.Learn-left {
+    width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.Underlay {
+    background: #33415c;
+    padding: 10px 10px 0;
+    border-radius: 30px;
+    position: relative;
+    
+
+
+    & .Slick-images {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        &::before{
+            position: absolute;
+            content: url('/assets/svg/PolkaDot.svg');
+            width: 100px;
+            height: 100px;
+            left: -34px;
+            top: -25px;
+            z-index: 1;
+        }
+        
+        & img{
+            margin-top: 0.8rem;
+            width: 95%;
+            height: 90%;
+            object-fit: fill;
+            border-radius: 10px;
+            z-index: 2;
+        }
+    }
+    & .Slide-list{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        & li{
+            margin: 0.6rem 0.3rem;
+            padding: 0.3rem;
+            width: 10px;
+            background-color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
+.Active-Slide{
+    /* padding-left: 2rem; */
+    width: 17px !important;
+}
+
+.Learn-right {
+    position: relative;
+    width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    & .Design {
         position: absolute;
-        left: -41.5rem;
-        top: 9.3rem;
+        bottom: 3%;
+        right: 8%;
     }
-} */
+}
+
+.Section-title-container {
+    padding: 0 78px 0 0;
+
+    & .Sub-title {
+        padding-bottom: 5px;
+        color: #564fff;
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 1.2;
+    }
+
+    & .Section-title {
+        position: relative;
+        padding: 0 0 12px;
+        font-size: 48px;
+        line-height: 56px;
+        font-weight: 700;
+
+        &::after {
+            position: absolute;
+            content: url('/assets/svg/LinedCircle.svg');
+            right: 22.5%;
+            top: -5%;
+            height: 100px;
+            width: 100px;
+            z-index: -1;
+        }
+    }
+}
+
+.List-content {
+    width: 62%;
+    padding: 15px 0;
+    column-count: 2;
+    list-style: none;
+
+    & svg {
+        margin-right: 6px;
+    }
+}
+
+.Section-summary {
+    padding-right: 55px;
+}
+
+.Section-footer {
+    padding-top: 28px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.2;
+
+    & a {
+        color: #ff564f;
+        padding-left: 10px;
+        position: relative;
+        text-decoration: none;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 3px;
+            left: 7%;
+            bottom: -7px;
+            border-radius: 2px;
+            background: #ff564f;
+            transition: all 150ms ease-in-out;
+        }
+
+        &:hover::after {
+            width: 94%;
+        }
+    }
+}

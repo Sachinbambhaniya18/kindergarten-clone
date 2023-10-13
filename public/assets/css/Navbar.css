@@ -44,7 +44,7 @@
                     scale: 0 1;
                     left: 0;
                     padding-bottom: 1px;
-                    bottom: -15px;
+                    bottom: -9.5px;
                     transform-origin: left;
                     transition: all 400ms ease-in-out;
                 }
@@ -76,7 +76,7 @@
             color: #fff;
             margin-right: 1.9rem;
             margin-left: 1.7rem;
-            padding: 12px 15px;
+            padding: 7.5px 15px;
             font-family: 'Roboto', sans-serif;
             cursor: pointer;
             transition: all 400ms ease-in-out;
@@ -117,7 +117,7 @@
 }
 .caret{
     position: absolute;
-    top: 0.1rem;
+    top: 0.5rem;
 }
 
 .caret-dynamic{
@@ -148,7 +148,7 @@
         background-color: #564fff;
         width: 100%;
         left: 0;
-        bottom: -15px;
+        bottom: -9.5px;
     }
 
 }

@@ -2,9 +2,9 @@ import React, { useContext } from 'react'
 import { CarouselItem } from './CarouselItem'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
-import { SliderContext } from '../pages/Home'
+import { SliderContext } from '../../pages/Home'
 
-const Carousel = ({prevIndex, nextIndex }) => {
+const Carousel = ({ prevIndex, nextIndex }) => {
     const {currentIndex, key} = useContext(SliderContext)
 
     return (

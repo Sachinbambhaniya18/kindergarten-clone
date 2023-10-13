@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { SliderContext } from '../pages/Home';
+import { SliderContext } from '../../pages/Home';
 import { items } from './carouselData';
 import { motion as m } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -22,14 +22,10 @@ export const CarouselItem = ({ indexValue, keyProp }) => {
             animate={{
                 translateX: '0',
                 transition: {
-                    // duration: '2',
                     type: 'spring', stiffness: 300, damping: 40
                 }
             }}
             exit={{ translateX: '100%' }}
-            transition={{
-                duration: '2'
-            }}
         >
             <button className="Video-modal" onClick={handleVideoOpen}>
                 <FontAwesomeIcon icon={faPlay} size="l" />
