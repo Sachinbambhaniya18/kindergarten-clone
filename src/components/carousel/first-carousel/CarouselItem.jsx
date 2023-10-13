@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { SliderContext } from '../../pages/Home';
-import { items } from './carouselData';
+import { items } from '../../static-data/carouselData';
 import { motion as m } from 'framer-motion';
 import { Link } from 'react-router-dom';
 

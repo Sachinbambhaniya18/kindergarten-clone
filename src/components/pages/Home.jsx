@@ -1,8 +1,10 @@
-import React, { useState, createContext, useReducer } from 'react';
+import React, { useState, createContext, useReducer, useContext } from 'react';
 import Carousel from '../carousel/first-carousel/Carousel';
 import VideoPlayer from '../modals/VideoPlayer';
-import { items } from '../carousel/first-carousel/carouselData';
+import { items } from '../static-data/carouselData';
 import LearnAbout from '../carousel/second-carousel/LearnAbout';
+import CardStructure from '../cards/CardStructure';
+import { HeadDataContext } from '../navigation/Navbar';
 
 export const SliderContext = createContext()
 const initial_state = {
@@ -17,19 +19,20 @@ const reducer = (state, action) => {
         currentIndex: (state.currentIndex + 1) % items.length,
         key: (state.key + 1)
       }
-    case 'prevIndex':
-      return {
-        ...state,
-        currentIndex: (state.currentIndex - 1 + items.length) % items.length,
-        key: (state.key - 1)
+      case 'prevIndex':
+        return {
+          ...state,
+          currentIndex: (state.currentIndex - 1 + items.length) % items.length,
+          key: (state.key - 1)
+        }
+        default:
+          return initial_state
+        }
       }
-    default:
-      return initial_state
-  }
-}
-const Home = () => {
-  const [state, dispatch] = useReducer(reducer, initial_state)
-  const [isPlayerOpen, setIsPlayerOpen] = useState(false);
+      const Home = () => {
+        const { heading } = useContext(HeadDataContext)
+        const [state, dispatch] = useReducer(reducer, initial_state)
+        const [isPlayerOpen, setIsPlayerOpen] = useState(false);
 
   const handleVideoClose = () => {
     setIsPlayerOpen(false);
@@ -62,6 +65,7 @@ const Home = () => {
         </div>
       </div>
       <LearnAbout />
+      <CardStructure subtitle={heading[0].subtitle} title={heading[0].title} content={heading[0].content}/>
     </div>
   )
 }

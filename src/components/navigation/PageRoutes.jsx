@@ -13,17 +13,17 @@ import NotFound from '../pages/PageNotFound'
 const PageRoutes = () => {
   return (
     <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/events' element={<Events/>}/>
-      <Route path='/teachers' element={<Teachers/>}/>
-      <Route path='/classes' element={<ClassesPage/>}/>
-      <Route path='/aboutus' element={<AboutUs/>}/>
-      <Route path='/contact' element={<Contact/>}/>
-      <Route path='/class/details' element={<ClassDetails/>}/>
-      <Route path='/event/details' element={<EventDetails/>}/>
-      <Route path='/teacher/details' element={<TeacherDetails/>}/>
-      <Route path='*' element={<NotFound/>}/>
-      <Route path='/pages'/>
+        <Route path='/' element={<Home />} />
+        <Route path='/events' element={<Events />} />
+        <Route path='/teachers' element={<Teachers />} />
+        <Route path='/classes' element={<ClassesPage />} />
+        <Route path='/aboutus' element={<AboutUs />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/class/details' element={<ClassDetails />} />
+        <Route path='/event/details' element={<EventDetails />} />
+        <Route path='/teacher/details' element={<TeacherDetails />} />
+        <Route path='*' element={<NotFound />} />
+        <Route path='/pages' />
     </Routes>
   )
 }

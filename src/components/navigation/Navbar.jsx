@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, createContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 import PageRoutes from './PageRoutes';
-import { navPaths } from '../PagePaths';
+import { navPaths } from '../static-data/PagePaths';
 import NavDropdown from '../NavDropdown';
+import { heading } from '../static-data/heading-data'
+
+export const HeadDataContext = createContext()
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
@@ -51,7 +54,9 @@ const Navbar = () => {
             </span>
           </div>
         </div>
-        <PageRoutes />
+        <HeadDataContext.Provider value={{heading: heading}}>
+          <PageRoutes />
+        </HeadDataContext.Provider>
       </nav>
     </header>
   )

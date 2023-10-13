@@ -8,15 +8,15 @@ const images = [
     alt: 'Children-learning.jpg'
   },
   {
-    src: '/assets/images/children-carousel.jpg',
+    src: '/assets/images/children-two.jpg',
     alt: 'Children-learning.jpg'
   },
   {
-    src: '/assets/images/children-carousel.jpg',
+    src: '/assets/images/children-three.jpg',
     alt: 'Children-learning.jpg'
   },
   {
-    src: '/assets/images/children-carousel.jpg',
+    src: '/assets/images/children-four.jpg',
     alt: 'Children-learning.jpg'
   }
 ]

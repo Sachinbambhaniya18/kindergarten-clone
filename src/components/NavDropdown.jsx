@@ -1,5 +1,5 @@
 import React from 'react'
-import { pagePaths } from './PagePaths';
+import { pagePaths } from './static-data/PagePaths';
 import { NavLink } from 'react-router-dom';
 import { motion as m } from 'framer-motion';
 const NavDropdown = ({ onClose }) => {

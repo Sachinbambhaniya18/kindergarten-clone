@@ -194,7 +194,7 @@
 .Slick-wrapper {
     margin-top: 100px;
     position: relative;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 
     &::after {
         position: absolute;
@@ -223,7 +223,6 @@
 }
 
 .Learn-left {
-    width: 50%;
     padding-right: 15px;
     padding-left: 15px;
 }
@@ -233,7 +232,7 @@
     padding: 10px 10px 0;
     border-radius: 30px;
     position: relative;
-    
+
 
 
     & .Slick-images {
@@ -245,7 +244,7 @@
         justify-content: center;
         flex-direction: column;
 
-        &::before{
+        &::before {
             position: absolute;
             content: url('/assets/svg/PolkaDot.svg');
             width: 100px;
@@ -254,8 +253,8 @@
             top: -25px;
             z-index: 1;
         }
-        
-        & img{
+
+        & img {
             margin-top: 0.8rem;
             width: 95%;
             height: 90%;
@@ -264,13 +263,15 @@
             z-index: 2;
         }
     }
-    & .Slide-list{
+
+    & .Slide-list {
         list-style: none;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
-        & li{
+
+        & li {
             margin: 0.6rem 0.3rem;
             padding: 0.3rem;
             width: 10px;
@@ -280,14 +281,14 @@
         }
     }
 }
-.Active-Slide{
+
+.Active-Slide {
     /* padding-left: 2rem; */
     width: 17px !important;
 }
 
 .Learn-right {
     position: relative;
-    width: 50%;
     padding-right: 15px;
     padding-left: 15px;
 
@@ -370,5 +371,48 @@
         &:hover::after {
             width: 94%;
         }
+    }
+}
+
+@media screen and (min-width : 376px) {
+    .Slider-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        
+    }
+    .Slider-Holder
+    .kids-img{
+        width: 90% !important;
+        margin-left: 10px;
+        /* object-fit: fill; */
+    }
+    .Learn-right,
+    .Learn-left {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .Section-title-container{
+        margin-top: 40px;
+    }
+    .List-content{
+        column-count: 1;
+    }
+}
+@media screen and (min-width : 992px) {
+    .Slider-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        
+    }
+    .Section-title-container{
+        margin-top: 0px;
+    }
+    .Learn-right,
+    .Learn-left {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .List-content{
+        column-count: 2;
     }
 }
