@@ -1,5 +1,14 @@
-.Class-card-container {
+.Class-section {
     margin-top: 100px;
+
+}
+
+.Class-card-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .Header {
@@ -26,16 +35,187 @@
                 font-size: 1.25rem;
                 line-height: 1.2;
             }
-            & .Header-title{
+
+            & .Header-title {
                 padding: 0 0 12px;
                 font-size: 48px;
                 line-height: 56px;
                 font-weight: 700;
 
             }
-            & .Header-content{
+
+            & .Header-content {
                 margin-bottom: 60px;
             }
         }
+    }
+}
+
+.Class-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.Classes-Card {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    & .Card {
+        position: relative;
+        transition: all 300ms linear;
+        &:hover {
+            box-shadow: rgba(86, 79, 255, 0.4) -5px 5px,
+                rgba(86, 79, 255, 0.3) -10px 10px,
+                rgba(86, 79, 255, 0.2) -15px 15px,
+                rgba(86, 79, 255, 0.1) -20px 20px,
+                rgba(86, 79, 255, 0.05) -25px 25px;
+        }
+
+        & .Card-image .card-img {
+            width: 100%;
+            height: 295px;
+            object-fit: cover;
+            max-width: 100%;
+            vertical-align: middle;
+
+        }
+
+        & .Card-info {
+            background: #fff;
+            box-shadow: 0 3px 20px 0 rgba(0, 0, 0, .08);
+            padding: 25px 20px 30px;
+            margin-bottom: 40px;
+            position: relative;
+
+            & .price {
+                background: #564fff;
+                display: flex;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                color: #fff;
+                font-weight: 700;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                right: 9%;
+                top: -11%;
+            }
+
+            & .Class-title {
+                font-weight: 700;
+                font-size: 1.5rem;
+                line-height: 1.2;
+
+                & a {
+                    color: #383838;
+                    text-decoration: none;
+                }
+            }
+
+            & .Class-info {
+                padding: 15px 0 !important;
+
+                & .Class-structure {
+                    column-count: 2;
+                    list-style: none;
+
+                    & li svg {
+                        margin-right: 7px;
+                    }
+                }
+
+                & .Class-location {
+                    column-count: 1;
+                    list-style: none;
+
+                    & li svg {
+                        margin-right: 7px;
+                    }
+                }
+            }
+
+            & .Enroll-btn a {
+                color: #ff564f;
+                text-decoration: none;
+                position: relative;
+                font-weight: 600;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 2px;
+                    background: #ff564f;
+                    left: 0;
+                    bottom: -2px;
+                    transition: all .3s linear;
+                }
+
+                & svg {
+                    margin-left: 30px;
+                    transition: all 300ms linear;
+                }
+                &:hover::after{
+                    width: 100%;
+                }
+                &:hover svg{
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .Class-card-container {
+        max-width: 340px;
+    }
+
+    .Classes-Card {
+        flex: 100%;
+    }
+
+    .Header {
+        flex: 100%;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .Class-card-container {
+        max-width: 540px;
+    }
+
+    .Classes-Card {
+        flex: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .Class-card-container {
+        max-width: 720px;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .Class-card-container {
+        max-width: 960px;
+    }
+
+    .Classes-Card {
+        flex: 33%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .Class-card-container {
+        max-width: 100%;
     }
 }

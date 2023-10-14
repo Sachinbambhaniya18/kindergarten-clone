@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import PageRoutes from './PageRoutes';
 import { navPaths } from '../static-data/PagePaths';
 import NavDropdown from '../NavDropdown';
-import { heading } from '../static-data/heading-data'
+import { heading } from '../static-data/heading-data';
 
 export const HeadDataContext = createContext()
 
@@ -39,10 +39,10 @@ const Navbar = () => {
                 </button>
                 <FontAwesomeIcon icon={faCaretUp} className={`caret ${isDropdownOpen ? 'caret-dynamic' : ''}`} />
               </li>
+              
               {
-                isDropdownOpen && <NavDropdown onClose={handleDropdown} />
+                isDropdownOpen && <NavDropdown isDropdownOpen={isDropdownOpen} />
               }
-
             </ul>
           </div>
           <div className='Contact-Info'>
@@ -53,8 +53,12 @@ const Navbar = () => {
               </span>
             </span>
           </div>
+          
+          <div className="Mobile-menu">
+            <span></span>
+          </div>
         </div>
-        <HeadDataContext.Provider value={{heading: heading}}>
+        <HeadDataContext.Provider value={{ heading: heading }}>
           <PageRoutes />
         </HeadDataContext.Provider>
       </nav>

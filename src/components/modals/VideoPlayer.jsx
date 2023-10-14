@@ -30,7 +30,7 @@ const VideoPlayer = ({ onClose, itemLink }) => {
           <button className="Modal-Close" onClick={onClose}></button>
         </div>
         <div className="Embed">
-          <m.iframe 
+          <m.iframe
           title="Demo-Video"
           width="100%" 
           height="100%"

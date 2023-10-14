@@ -36,6 +36,7 @@ export const CarouselItem = ({ indexValue, keyProp }) => {
                 <span>{item.span}</span>
             </h1>
             <p>{item.description}</p>
+            <div className="Action-btn">
             <Link to="/" className="Apply-btn">
                 Apply Now
                 <FontAwesomeIcon icon={faArrowRight} className="Action-align" />
@@ -44,6 +45,7 @@ export const CarouselItem = ({ indexValue, keyProp }) => {
                 Learn More
                 <FontAwesomeIcon icon={faArrowRight} className="Action-align" />
             </Link>
+            </div>
         </m.div>
 
     )

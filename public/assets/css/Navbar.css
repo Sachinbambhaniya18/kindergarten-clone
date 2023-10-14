@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
-.Main-Header{
+
+.Main-Header {
     width: 100vw;
 }
+
 .Container {
     & .Wrapper {
         position: fixed;
@@ -60,8 +62,8 @@
                     color: rgb(56, 56, 56);
                     font-weight: 700;
                     font-family: 'Roboto', sans-serif;
-                    
-                    &:hover{
+
+                    &:hover {
                         color: #564fff;
                     }
                 }
@@ -91,11 +93,12 @@
         }
     }
 }
+
 .Page {
     position: relative;
     cursor: pointer;
 
-    & button{
+    & button {
         border: none;
         font-size: 16px;
         font-weight: 700;
@@ -105,29 +108,32 @@
         cursor: pointer;
 
         margin-right: 0.3rem;
-        &:hover{
+
+        &:hover {
             color: #564fff;
         }
-        &:hover + .caret{
+
+        &:hover+.caret {
             color: #564fff !important;
         }
 
     }
-    
+
 }
-.caret{
+
+.caret {
     position: absolute;
     top: 0.5rem;
 }
 
-.caret-dynamic{
+.caret-dynamic {
     rotate: 180deg;
     color: #564fff !important;
 }
 
-.active{
+.active {
     color: #564fff !important;
-    
+
     &::before {
         position: absolute;
         content: '';
@@ -138,9 +144,10 @@
         top: 31px;
     }
 }
-.Active-btn{
+
+.Active-btn {
     color: #564fff !important;
-    
+
     &::before {
         position: absolute;
         content: '';
@@ -151,4 +158,94 @@
         bottom: -9.5px;
     }
 
+}
+
+.Mobile-menu {
+    cursor: pointer;
+    position: relative;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-right: 10px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        background: #ffab4a;
+        width: 26px;
+        height: 3.5px;
+        border-radius: 10px;
+        left: -8px;
+        top: 0px;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 23px;
+        left: -5px;
+        top: 8px;
+    }
+
+    &::after,
+    span {
+        background: #ffab4a;
+        border-radius: 10px;
+    }
+    & span{
+        height: 4.5px;
+        top: -8px;
+        right: -8px;
+        position: absolute;
+        width: 30px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .Paths {
+        display: none;
+    }
+    
+    .Mobile-menu {
+        display: block;
+    }
+    .Contact-Info {
+        display: none;
+    }
+}
+@media screen and (min-width: 320px) {
+    .Paths {
+        display: none;
+    }
+
+    .Contact-Info {
+        display: none;
+    }
+
+    .Logo h1 {
+        font-size: 22px !important;
+    }
+
+    .Mobile-menu {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .Paths {
+        margin-left: 5rem;
+        display: block;
+    }
+
+    .Contact-Info {
+        display: inline;
+        margin-left: 8rem !important;
+    }
+
+    .Logo h1 {
+        font-size: 28px !important;
+    }
+
+    .Mobile-menu {
+        display: none;
+    }
 }

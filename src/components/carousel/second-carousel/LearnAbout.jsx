@@ -2,31 +2,17 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Checked } from './svg-list-item/Checked';
 import { motion as m } from 'framer-motion';
-const images = [
-  {
-    src: '/assets/images/children-carousel.jpg',
-    alt: 'Children-learning.jpg'
-  },
-  {
-    src: '/assets/images/children-two.jpg',
-    alt: 'Children-learning.jpg'
-  },
-  {
-    src: '/assets/images/children-three.jpg',
-    alt: 'Children-learning.jpg'
-  },
-  {
-    src: '/assets/images/children-four.jpg',
-    alt: 'Children-learning.jpg'
-  }
-]
-const pagination = [{index: 0},{index: 1},{index: 2},{index: 3},]
 
 const LearnAbout = () => {
+  const pagination = [{ index: 0 }, { index: 1 }, { index: 2 }, { index: 3 },]
   const [activeIndex, setActiveIndex] = useState(0)
-  const key = activeIndex;
-  const image = images[activeIndex]
-  
+  const images = [
+    '/assets/images/carousel/children-one.jpg',
+    '/assets/images/carousel/children-two.jpg',
+    '/assets/images/carousel/children-three.jpg',
+    '/assets/images/carousel/children-four.jpg'
+  ]
+
   return (
     <div className='Slick-wrapper'>
       <div className="Slick-container">
@@ -34,18 +20,18 @@ const LearnAbout = () => {
           <div className="Learn-left">
             <div className="Underlay">
               <div className="Slick-images">
-                <m.img 
-                key={key}
-                src={image.src}
-                alt={image.alt}
-                initial={{scale: 0}}
-                animate={{scale: 1, transition: {duration: '0.3'}}}
-                exit={{scale: 0}}
+                <m.img
+                  key={activeIndex}
+                  src={images[activeIndex]}
+                  alt="Carousel image.jpg"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1, transition: { duration: '0.8', delay: '0.3' } }}
+                  exit={{ scale: 0 }}
                 />
               </div>
               <ul className='Slide-list'>
-                {pagination.map((slide)=>{
-                  return <li key={slide.index} className={`Slick-list ${slide.index === activeIndex ? 'Active-Slide' : ''}`} onClick={()=>setActiveIndex(slide.index)}></li>
+                {pagination.map((slide) => {
+                  return <li key={slide.index} className={`Slick-list ${slide.index === activeIndex ? 'Active-Slide' : ''}`} onClick={() => setActiveIndex(slide.index)}></li>
                 })}
               </ul>
             </div>
