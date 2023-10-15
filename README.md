@@ -43,5 +43,5 @@ To get started with the project, follow these steps:
 This project is not affiliated with or endorsed by the original website or its creators. It is intended for educational purposes and to showcase web development skills.
 
 For any questions, concerns, or inquiries, please contact at 
-[schnbambhaniya@gmail.com](mailto:schnbambhaniya@gmail.com.)
+[schnbambhaniya@gmail.com](mailto:schnbambhaniya@gmail.com.) / [yadavneha0401@gmail.com](mailto:yadavneha0401@gmail.com.)
 
