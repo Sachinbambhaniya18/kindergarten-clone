@@ -17,6 +17,13 @@ We'd like to extend our thanks to the collaborators who contributed to this proj
 - [Your Name] - [Sachin Bambhaniya](https://github.com/Sachinbambhaniya18)
 - [Collaborator Name] - [Neha Yadav](https://github.com/Neha020401)
 
+### Responsibilities
+
+- [Sachin Bambhaniya](https://github.com/Sachinbambhaniya18)
+- &rArr; Navbar, Homepage, EventPage, TeacherPage, ClassPage, About, Contact, 404.
+- [Neha Yadav](https://github.com/Neha020401)
+- &rArr; Event-DetailsPage, Teacher-DetailsPage, Class-DetailsPage, Sign Up/ Sign In.
+
 
 
 ## Getting Started
