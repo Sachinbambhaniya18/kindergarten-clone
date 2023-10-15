@@ -14,8 +14,8 @@ This project is a non-commercial educational endeavor, and all rights to the ori
 
 We'd like to extend our thanks to the collaborators who contributed to this project:
 
-- [Your Name] - [Sachin Bambhaniya](https://github.com/Sachinbambhaniya18)
-- [Collaborator Name] - [Neha Yadav](https://github.com/Neha020401)
+- Name - [Sachin Bambhaniya](https://github.com/Sachinbambhaniya18)
+- Name - [Neha Yadav](https://github.com/Neha020401)
 
 ### Responsibilities
 
