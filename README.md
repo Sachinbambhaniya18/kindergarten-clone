@@ -19,10 +19,10 @@ We'd like to extend our thanks to the collaborators who contributed to this proj
 
 ### Responsibilities
 
-- [Sachin Bambhaniya](https://github.com/Sachinbambhaniya18)
- &rArr; Navbar, Homepage, EventPage, TeacherPage, ClassPage, About, Contact, 404.
-- [Neha Yadav](https://github.com/Neha020401)
- &rArr; Event-DetailsPage, Teacher-DetailsPage, Class-DetailsPage, Sign Up/ Sign In.
+- [Sachin Bambhaniya](https://github.com/Sachinbambhaniya18) <br/>
+ &rArr;  Navbar, Homepage, EventPage, TeacherPage, ClassPage, About, Contact, 404.
+- [Neha Yadav](https://github.com/Neha020401) <br/>
+ &rArr;  Event-DetailsPage, Teacher-DetailsPage, Class-DetailsPage, Sign Up/ Sign In.
 
 
 
