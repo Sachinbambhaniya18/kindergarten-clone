@@ -41,7 +41,7 @@ const reducer = (state, action) => {
   const item = items[state.currentIndex]
 
   return (
-    <div className='Home-Page'>
+    <div className='Home-Page' id='section1'>
       {
         isPlayerOpen && <VideoPlayer onClose={handleVideoClose} itemLink={item.link} />
       }
@@ -66,6 +66,7 @@ const reducer = (state, action) => {
       </div>
       <LearnAbout />
       <CardStructure subtitle={heading[0].subtitle} title={heading[0].title} content={heading[0].content}/>
+      
     </div>
   )
 }

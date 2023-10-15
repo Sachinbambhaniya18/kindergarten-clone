@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Book, User, Location, ArrowRight } from './CardSvg';
+import { Book, User, Location} from './CardSvg';
+import { ReadMore } from '../Button';
 
 const CardOne = ({ cardImage, cardPrice, cardTitle }) => {
   return (
@@ -32,12 +33,7 @@ const CardOne = ({ cardImage, cardPrice, cardTitle }) => {
                 </li>
               </ul>
             </div>
-            <div className="Enroll-btn">
-              <Link href="/">
-                Enroll Now
-                <ArrowRight />
-              </Link>
-            </div>
+            <ReadMore title="Enroll Now" />
           </div>
         </div>
     </div>

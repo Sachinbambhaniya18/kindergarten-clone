@@ -2,7 +2,7 @@ export const cards = [
     {
         src: '/assets/images/class-grid/language.jpg',
         title: 'Bangla Class',
-        price: '$90'
+        price: '$70'
     },
     {
         src: '/assets/images/class-grid/evs.jpg',
@@ -12,17 +12,17 @@ export const cards = [
     {
         src: '/assets/images/class-grid/english.jpg',
         title: 'English Class',
-        price: '$90'
+        price: '$95'
     },
     {
         src: '/assets/images/class-grid/maths.jpg',
         title: 'Maths Class',
-        price: '$90'
+        price: '$95'
     },
     {
         src: '/assets/images/class-grid/creativity.jpg',
         title: 'Art Class',
-        price: '$90'
+        price: '$75'
     },
     {
         src: '/assets/images/class-grid/geography.jpg',

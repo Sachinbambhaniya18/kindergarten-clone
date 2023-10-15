@@ -2,6 +2,7 @@ import React from 'react'
 import Heading from '../others/Heading'
 import CardOne from './CardOne'
 import { cards } from '../static-data/classCard'
+import { Button } from '../Button'
 
 const CardStructure = ({ subtitle, title, content }) => {
 
@@ -18,6 +19,7 @@ const CardStructure = ({ subtitle, title, content }) => {
             })
           }
         </div>
+        <Button title="Discover More Projects"/>
       </div>
     </div>
   )

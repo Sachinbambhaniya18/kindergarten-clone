@@ -11,3 +11,27 @@
 .Scroll-lock{
     overflow: hidden;
 }
+.scroll-to-top-button {
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    height: 45px;
+    width: 45px;
+    z-index: 99;
+    border: none;
+    background-color: #ffab4a;
+    color: white;
+    border-radius: 50%;
+    font-size: 16px;
+    
+  }
+  
+  .scroll-to-top-button.visible {
+    display: block;
+  }
+  
+  .scroll-to-top-button:hover {
+    cursor: pointer;
+  }
+  

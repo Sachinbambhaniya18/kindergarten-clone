@@ -67,12 +67,11 @@
     & .Card {
         position: relative;
         transition: all 300ms linear;
+
         &:hover {
-            box-shadow: rgba(86, 79, 255, 0.4) -5px 5px,
-                rgba(86, 79, 255, 0.3) -10px 10px,
-                rgba(86, 79, 255, 0.2) -15px 15px,
-                rgba(86, 79, 255, 0.1) -20px 20px,
-                rgba(86, 79, 255, 0.05) -25px 25px;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+                rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+                rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
         }
 
         & .Card-image .card-img {
@@ -162,10 +161,12 @@
                     margin-left: 30px;
                     transition: all 300ms linear;
                 }
-                &:hover::after{
+
+                &:hover::after {
                     width: 100%;
                 }
-                &:hover svg{
+
+                &:hover svg {
                     margin-left: 15px;
                 }
             }
@@ -173,7 +174,64 @@
     }
 }
 
+.Btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    & .Btn-col {
+        flex: 0 0 100%;
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        max-width: 100%;
+
+        & .Name {
+            text-align: center;
+
+            & a {
+                position: relative;
+                text-decoration: none;
+                color: #383838;
+                font-weight: 700;
+                border: 2px solid #33415c;
+                width: 26%;
+                display: inline-flex;
+                text-align: center;
+                justify-content: center;
+                height: 50px;
+                align-items: center;
+                margin-top: 20px;
+                &::after{
+                    position: absolute;
+                    content: '';
+                    background-color: #33415c;
+                    inset: 0;
+                    z-index: -1;
+                    scale: 0;
+                    transition: all 300ms linear;
+                }
+                &:hover::after{
+                    scale: 1;
+                }
+                &:hover{
+                    color: #fff;
+                    
+                }
+                & svg{
+                    margin-left: 22px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 320px) {
+    .Name a{
+        width: 80% !important;
+    }
     .Class-card-container {
         max-width: 340px;
     }
@@ -195,11 +253,17 @@
     .Classes-Card {
         flex: 50%;
     }
+    .Name a{
+        width: 50% !important;
+    }
 }
 
 @media screen and (min-width: 768px) {
     .Class-card-container {
         max-width: 720px;
+    }
+    .Name a{
+        width: 50% !important;
     }
 
 }
@@ -212,10 +276,16 @@
     .Classes-Card {
         flex: 33%;
     }
+    .Name a{
+        width: 34% !important;
+    }
 }
 
 @media screen and (min-width: 1200px) {
     .Class-card-container {
         max-width: 100%;
+    }
+    .Name a{
+        width: 26% !important;
     }
 }
