@@ -8,7 +8,7 @@ const CardStructure = ({ subtitle, title, content }) => {
 
   return (
     <div className="Class-section">
-      <div className="Class-decor"></div>
+      <div className="Class-decor"><img src="/assets/svg/HollowCircle.svg" alt="Circle" /></div>
       <div className='Class-card-container'>
         <Heading subtitle={subtitle} title={title} content={content} />
         <div className="Class-row">

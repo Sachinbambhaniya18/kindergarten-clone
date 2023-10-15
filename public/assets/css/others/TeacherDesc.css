@@ -1,0 +1,121 @@
+.Description-wrapper {
+    margin-bottom: 100px;
+
+    & .Description-container {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+
+        & .Description-row {
+            display: flex;
+            flex-wrap: wrap;
+
+            & .Description-col {
+                position: relative;
+                width: 100%;
+
+                & .Description-img {
+                    position: relative;
+
+                    & img {
+                        width: 100%;
+                        height: 784px;
+                        object-fit: cover;
+                        vertical-align: middle;
+                    }
+
+                    & .Play-btn {
+                        position: absolute;
+                        top: 45%;
+                        left: 45%;
+                        background: #fff;
+                        color: #33415c;
+                        width: 60px;
+                        height: 60px;
+                        border: none;
+                        border-radius: 50%;
+                        font-size: 19px;
+                        transition: all 150ms linear;
+                        cursor: pointer;
+
+                        &:hover{
+                            background-color: #ff564f;
+                            color: #fff;
+                        }
+
+                    }
+                }
+            }
+
+            & .Right-section {
+                background: #235c51;
+
+                & .Description {
+                    padding: 80px 62px;
+                    color: #fff;
+                    width: 674px;
+
+                    & .Desc-section-title {
+                        & .Desc-subtitle {
+                            color: #fff;
+                            font-weight: 700;
+                            padding-bottom: 5px;
+                            font-size: 1.25rem;
+                            line-height: 1.2;
+                        }
+
+                        & .Desc-title {
+                            padding: 0 0 12px;
+                            font-size: 48px;
+                            line-height: 56px;
+                            font-weight: 700;
+
+                        }
+                    }
+
+                    & .Desc-options {
+                        & .Options {
+                            display: flex;
+                            padding-top: 35px;
+
+                            & .Option-img {
+                                background: #fff;
+                                height: 80px;
+                                width: 80px;
+                                justify-content: center;
+                                align-items: center;
+                                display: flex;
+                                border-radius: 50%;
+
+                                & img {
+                                    vertical-align: middle;
+                                }
+                            }
+
+                            & .Option-content {
+                                flex: 0 0 83%;
+                                padding-left: 28px;
+
+                                & h5 {
+                                    padding-bottom: 8px;
+                                    font-size: 1.25rem;
+                                    font-weight: 500;
+                                    line-height: 1.2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 992px) {
+    .Description-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
