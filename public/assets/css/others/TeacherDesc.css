@@ -1,8 +1,9 @@
 .Description-wrapper {
-    margin-bottom: 100px;
+    padding-bottom: 100px;
 
     & .Description-container {
         width: 100%;
+        padding: 0 !important;
         margin-right: auto;
         margin-left: auto;
 
@@ -53,7 +54,7 @@
                 & .Description {
                     padding: 80px 62px;
                     color: #fff;
-                    width: 674px;
+                    width: 100%;
 
                     & .Desc-section-title {
                         & .Desc-subtitle {
@@ -62,6 +63,7 @@
                             padding-bottom: 5px;
                             font-size: 1.25rem;
                             line-height: 1.2;
+                            text-wrap: wrap;
                         }
 
                         & .Desc-title {
@@ -69,6 +71,7 @@
                             font-size: 48px;
                             line-height: 56px;
                             font-weight: 700;
+                            text-wrap: wrap;
 
                         }
                     }
@@ -95,12 +98,14 @@
                             & .Option-content {
                                 flex: 0 0 83%;
                                 padding-left: 28px;
+                                text-wrap: wrap;
 
                                 & h5 {
                                     padding-bottom: 8px;
                                     font-size: 1.25rem;
                                     font-weight: 500;
                                     line-height: 1.2;
+                                    text-wrap: wrap;
                                 }
                             }
                         }
@@ -113,9 +118,97 @@
 
 
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 320px) {
     .Description-col {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    .Description-img img{
+        height: 300px !important;
+    }
+    .Play-btn{
+        left: 42% !important;
+    }
+    .Options{
+        display: block !important;
+        
+    }
+    .Option-content{
+        padding-left: 0 !important;
+        padding-top: 28px;
+        
+    }
+    .Description{
+        padding: 40px 20px !important;
     }
 }
+@media screen and (min-width: 768px) {
+    .Description-col {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    .Description-img img{
+        height: 500px !important;
+    }
+    .Play-btn{
+        left: 45% !important;
+    }
+    .Options{
+        display: flex !important;
+        
+    }
+    .Option-content{
+        padding-left: 28px !important;
+        padding-top: 0px !important;
+        
+    }
+    .Description{
+        padding: 80px 62px !important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .Description-col {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+    .Description-img img{
+        height: 832px !important;
+    }
+    .Play-btn{
+        left: 45% !important;
+    }
+    .Options{
+        display: flex !important;
+    }
+    .Option-content{
+        padding-left: 28px !important;
+        padding-top: 0 !important;
+    }
+    .Description{
+        padding: 46px 26px !important;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .Description-col {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+    .Description-img img{
+        height: 814px !important;
+    }
+    .Play-btn{
+        left: 45% !important;
+    }
+    .Options{
+        display: flex !important;
+    }
+    .Option-content{
+        padding-left: 28px !important;
+        padding-top: 0 !important;
+    }
+    .Description{
+        padding: 80px 62px !important;
+    }
+}
+

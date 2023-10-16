@@ -5,9 +5,33 @@
     margin: 0;
     box-sizing: border-box;
 }
-.App{
-    overflow-x: hidden;
+a:focus,
+button:focus{
+  outline: none;
 }
+.App{
+    overflow-x: hidden !important;
+    
+    
+}
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  border: none;
+  box-shadow: inset 0 0 2px grey;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(182, 182, 182);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(159, 159, 159);
+}
+
 .Scroll-lock{
     overflow: hidden;
 }

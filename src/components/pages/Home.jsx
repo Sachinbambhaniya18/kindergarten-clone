@@ -3,7 +3,7 @@ import Carousel from '../carousel/first-carousel/Carousel';
 import VideoPlayer from '../modals/VideoPlayer';
 import { items } from '../static-data/carouselData';
 import LearnAbout from '../carousel/second-carousel/LearnAbout';
-import CardStructure from '../cards/CardStructure';
+import CardStructure from '../cards/class-structure/CardStructure';
 import { HeadDataContext } from '../navigation/Navbar';
 import TeacherDesc from '../TeacherDesc';
 
