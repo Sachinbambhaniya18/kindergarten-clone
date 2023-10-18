@@ -12,17 +12,9 @@ This project is a non-commercial educational endeavor, and all rights to the ori
 
 ## Collaborators
 
-We'd like to extend our thanks to the collaborators who contributed to this project:
+I am the sole contributor to this project:
 
 - Name - [Sachin Bambhaniya](https://github.com/Sachinbambhaniya18)
-- Name - [Neha Yadav](https://github.com/Neha020401)
-
-### Responsibilities
-
-- [Sachin Bambhaniya](https://github.com/Sachinbambhaniya18) <br/>
- &rArr;  Navbar, Homepage, EventPage, TeacherPage, ClassPage, About, Contact, 404.
-- [Neha Yadav](https://github.com/Neha020401) <br/>
- &rArr;  Event-DetailsPage, Teacher-DetailsPage, Class-DetailsPage, Sign Up/ Sign In.
 
 
 
@@ -43,5 +35,4 @@ To get started with the project, follow these steps:
 This project is not affiliated with or endorsed by the original website or its creators. It is intended for educational purposes and to showcase web development skills.
 
 For any questions, concerns, or inquiries, please contact at 
-[schnbambhaniya@gmail.com](mailto:schnbambhaniya@gmail.com.) / [yadavneha0401@gmail.com](mailto:yadavneha0401@gmail.com.)
-
+[schnbambhaniya@gmail.com](mailto:schnbambhaniya@gmail.com.)
