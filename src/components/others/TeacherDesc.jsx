@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react'
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
-import { TeacherModal } from './pages/Home';
-import VideoPlayer from './modals/VideoPlayer';
+import { TeacherModal } from '../pages/Home';
+import VideoPlayer from '../modals/VideoPlayer';
 const TeacherDesc = () => {
     const { isPlayerOpen, setIsPlayerOpen, handleVideoClose } = useContext(TeacherModal)
     const handleOpenOnClick = () =>{

@@ -1,0 +1,285 @@
+.Teacher-wrapper {
+    padding-bottom: 100px;
+}
+
+.Teacher-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Teacher-grid,
+.Staff-footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.Teacher-card-container,
+.Staff-col {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    &:hover .Teacher-img img {
+        scale: 1.1;
+    }
+}
+
+.Teacher-img {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+
+    & img {
+        width: 100%;
+        border-radius: 8px;
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+        transition: all .2s linear;
+    }
+
+}
+
+.Teacher-content {
+    position: absolute;
+    top: 54%;
+    background: #fff;
+    left: 18%;
+    width: 65%;
+    height: 20%;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+
+    & .Teacher-details {
+        transform: translateY(18px);
+
+
+        & h5 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            font-size: 1.25rem;
+            line-height: 1.2;
+
+        }
+
+        & h6 {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        & .Social-links {
+            & ul {
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                scale: 1 0;
+                padding-inline: 41px;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                background: #fff;
+                transform-origin: top;
+                transition: all 200ms linear;
+
+                & li {
+                    padding: 0 7px;
+                    font-size: 14px;
+
+                    & a {
+                        text-decoration: none;
+                        border-radius: 2px;
+                        cursor: pointer;
+
+                    }
+                }
+            }
+        }
+
+        &:hover .Social-links ul {
+            scale: 1 1;
+        }
+    }
+}
+
+.Staff-footer-container {
+    padding-top: 20px;
+    text-align: center;
+
+    & .Qualification {
+        font-size: 20px;
+        font-weight: 700;
+        color: #383838;
+        text-decoration: none;
+
+    }
+
+    & .View-btn {
+        color: #383838;
+        font-weight: 700;
+        border: 2px solid #33415c;
+        width: 15%;
+        display: inline-flex;
+        text-align: center;
+        justify-content: center;
+        height: 50px;
+        align-items: center;
+        margin: 0 20px;
+        position: relative;
+        text-decoration: none;
+
+        &::after {
+            position: absolute;
+            content: '';
+            background-color: #33415c;
+            inset: 0;
+            z-index: -1;
+            scale: 0;
+            transition: all 200ms linear;
+        }
+
+        &:hover::after {
+            scale: 1;
+        }
+
+        &:hover {
+            color: #fff;
+        }
+
+        & svg {
+            padding-left: 15px;
+        }
+    }
+
+    & .Career-btn {
+        font-size: 20px;
+        font-weight: 550;
+        color: #ff564f;
+        position: relative;
+        width: 70px;
+        display: inline-block;
+        text-decoration: none;
+        transition: all 200ms linear;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 20%;
+            height: 3px;
+            background: #ff564f;
+            left: 2px;
+            bottom: -2px;
+            transition: all .2s linear;
+        }
+
+        &:hover::after {
+            width: 120%;
+        }
+
+        &:hover {
+            letter-spacing: 2px;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .Teacher-card-container {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .Teacher-container {
+        max-width: 300px;
+    }
+
+    .Social-links ul {
+        padding-inline: 46px !important;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .Teacher-container {
+        max-width: 540px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .Staff-footer-container a {
+        width: 100%;
+        display: block;
+    }
+
+    .Staff-footer-container a.View-btn {
+        width: 56%;
+        margin: 10px;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .Teacher-card-container {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+
+    .Teacher-container {
+        max-width: 720px !important;
+    }
+
+    .Social-links ul {
+        padding-inline: 65.2px !important;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .Teacher-card-container {
+        flex: 0 0 33.333% !important;
+        max-width: 33.333% !important;
+    }
+
+    .Teacher-container {
+        max-width: 960px !important;
+    }
+
+    .Social-links ul {
+        padding-inline: 52.4px !important;
+    }
+
+    .Staff-col {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .Staff-footer-container a.View-btn {
+        width: 20% !important;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .Teacher-card-container {
+        flex: 0 0 25% !important;
+        max-width: 25% !important;
+    }
+
+    .Teacher-container {
+        max-width: 1200px !important;
+    }
+
+    .Social-links ul {
+        padding-inline: 46px !important;
+    }
+
+}

@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/navigation/Navbar';
-import ScrollToTopButton from './components/ScrollToTopButton';
+import ScrollToTopButton from './components/others/ScrollToTopButton';
 
 const App = () => {
   return (

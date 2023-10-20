@@ -1,20 +1,14 @@
-import React, { useState, createContext } from 'react';
+import React, { createContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faCaretUp } from '@fortawesome/free-solid-svg-icons';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import PageRoutes from './PageRoutes';
-import { navPaths } from '../static-data/PagePaths';
-import NavDropdown from '../NavDropdown';
+import { navPaths, pagePaths } from '../static-data/PagePaths';
 import { heading } from '../static-data/heading-data';
 
 export const HeadDataContext = createContext()
 
 const Navbar = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-  const handleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen)
-  }
   return (
     <header className='Main-Header'>
       <nav className="Container">
@@ -34,15 +28,19 @@ const Navbar = () => {
                 })
               }
               <li className="Page">
-                <button onClick={handleDropdown} className={isDropdownOpen ? 'Active-btn' : ''}>
-                  Pages
-                </button>
-                <FontAwesomeIcon icon={faCaretUp} className={`caret ${isDropdownOpen ? 'caret-dynamic' : ''}`} />
+                <Link to='#' className='path'>Pages</Link>
+                <ul className='dropdown'>
+                {
+                  pagePaths.map((page) => {
+                    return (
+                        <li>
+                          <NavLink to={page.path} className={({ isActive }) => (isActive ? 'Active-d' : null)}>{page.name}</NavLink>
+                        </li>
+                    )
+                  })
+                }
+                </ul>
               </li>
-              
-              {
-                isDropdownOpen && <NavDropdown isDropdownOpen={isDropdownOpen} />
-              }
             </ul>
           </div>
           <div className='Contact-Info'>
@@ -53,7 +51,7 @@ const Navbar = () => {
               </span>
             </span>
           </div>
-          
+
           <div className="Mobile-menu">
             <span></span>
           </div>

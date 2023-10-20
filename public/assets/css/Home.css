@@ -539,6 +539,9 @@
     .Slider-Holder::after {
             top: 10rem;
         }
+    .Slider-Holder::before{
+        height: 400px !important;
+    }
     }
     .Slick-wrapper::after{
         top: 40% !important;

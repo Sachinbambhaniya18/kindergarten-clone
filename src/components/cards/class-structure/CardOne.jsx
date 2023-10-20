@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { Book, User, Location} from './CardSvg';
-import { ReadMore } from '../../Button';
+import { ReadMore } from '../../others/Button';
 
 const CardOne = ({ cardImage, cardPrice, cardTitle }) => {
   return (

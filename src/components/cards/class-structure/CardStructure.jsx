@@ -2,7 +2,7 @@ import React from 'react'
 import Heading from '../../others/Heading'
 import CardOne from './CardOne'
 import { cards } from '../../static-data/classCard'
-import { Button } from '../../Button'
+import { Button } from '../../others/Button'
 
 const CardStructure = ({ subtitle, title, content }) => {
 

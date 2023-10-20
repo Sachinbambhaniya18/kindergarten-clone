@@ -5,7 +5,8 @@ import { items } from '../static-data/carouselData';
 import LearnAbout from '../carousel/second-carousel/LearnAbout';
 import CardStructure from '../cards/class-structure/CardStructure';
 import { HeadDataContext } from '../navigation/Navbar';
-import TeacherDesc from '../TeacherDesc';
+import TeacherDesc from '../others/TeacherDesc';
+import Staff from '../others/staff-grid/Staff';
 
 export const SliderContext = createContext()
 export const TeacherModal = createContext()
@@ -76,6 +77,7 @@ const Home = () => {
       }}>
         <TeacherDesc />
       </TeacherModal.Provider>
+      <Staff />
     </div>
   )
 }

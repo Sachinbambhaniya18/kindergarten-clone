@@ -1,7 +1,8 @@
 import React from 'react';
-import { CaretRight } from './cards/class-structure/CardSvg';
+
 import { Link } from 'react-router-dom';
-import { ArrowRight } from './cards/class-structure/CardSvg';
+import { ArrowRight } from '../cards/class-structure/CardSvg';
+import { CaretRight } from '../cards/class-structure/CardSvg';
 
 export const Button = ({ title }) => {
     return (

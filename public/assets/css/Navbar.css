@@ -50,7 +50,9 @@
                     transform-origin: left;
                     transition: all 400ms ease-in-out;
                 }
-
+                & .dropdown li::after{
+                    display: none;
+                }
                 &:hover::after {
                     scale: 1 1;
                 }
@@ -98,25 +100,30 @@
     position: relative;
     cursor: pointer;
 
-    & button {
-        border: none;
-        font-size: 16px;
-        font-weight: 700;
-        font-family: 'Roboto', sans-serif;
-        color: rgb(56, 56, 56);
-        background-color: transparent;
-        cursor: pointer;
+    & .dropdown{
+        position: absolute;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        width: 180px;
+        transform: translateX(-20px);
+        left: 0;
+        top: 45px;
+        padding: 15px 5px;
+        text-align: left;
+        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15);
+        z-index: 1;
+        visibility: hidden;
+        transition: all 200ms linear;
 
-        margin-right: 0.3rem;
-
-        &:hover {
-            color: #564fff;
-        }
-
-        &:hover+.caret {
-            color: #564fff !important;
-        }
-
+        
+    }
+    &:hover .dropdown{
+        transform: translateX(-10px);
+        visibility: visible;
+    }
+    &:hover .path{
+        color: #564fff !important;
     }
 
 }
@@ -144,6 +151,10 @@
         top: 31px;
     }
 }
+.Active-d{
+    color: #564fff !important;
+}
+
 
 .Active-btn {
     color: #564fff !important;
@@ -200,44 +211,83 @@
         width: 30px;
     }
 }
-@media screen and (max-width: 320px) {
-    .Paths {
+@media screen and (max-width: 319px) {
+    .Paths{
+        display: none !important;
+    }
+    .Contact-Info{
         display: none;
+
+    }
+}
+@media screen and (min-width: 320px) {
+    .Paths {
+        display: none !important;
+        & ul li a{
+            font-size: 12px !important;
+        }
     }
     
     .Mobile-menu {
         display: block;
     }
     .Contact-Info {
-        display: none;
+        display: none !important;
     }
-}
-@media screen and (min-width: 320px) {
-    .Paths {
-        display: none;
-    }
-
-    .Contact-Info {
-        display: none;
-    }
-
+    
     .Logo h1 {
         font-size: 22px !important;
-    }
-
-    .Mobile-menu {
-        display: block;
     }
 }
 
 @media screen and (min-width: 992px) {
+
     .Paths {
-        margin-left: 5rem;
-        display: block;
+        margin-left: 3rem;
+        display: block !important;
+        & ul li a{
+            font-size: 13px !important;
+        }
     }
 
     .Contact-Info {
-        display: inline;
+        display: inline !important;
+        margin-left: 8rem !important;
+    }
+
+    .Logo h1 {
+        font-size: 24px !important;
+    }
+
+    .Mobile-menu {
+        display: none;
+    }
+    .Contact-Info{
+        margin-right: 1.2rem !important;
+        margin-left: 1rem !important;
+        padding: 5px 10px !important;
+    }
+    .Page button{
+        font-size: 13px !important;
+    }
+    .Page svg{
+        font-size: 13px !important;
+        top: 9px !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .Paths {
+        margin-left: 3rem !important;
+        display: block !important;
+        & ul li a{
+            font-size: 16px !important;
+        }
+    }
+
+    .Contact-Info {
+        display: inline !important;
         margin-left: 8rem !important;
     }
 
@@ -246,6 +296,18 @@
     }
 
     .Mobile-menu {
-        display: none;
+        display: none !important;
+    }
+    .Contact-Info{
+        margin-right: 1.9rem !important;
+        margin-left: 1.7rem !important;
+        padding: 7.5px 15px !important;
+    }
+    .Page button{
+        font-size: 16px !important;
+    }
+    .Page svg{
+        font-size: 16px !important;
+        top: 7px !important;
     }
 }
