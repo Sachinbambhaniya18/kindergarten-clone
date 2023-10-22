@@ -27,6 +27,7 @@ const LearnAbout = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1, transition: { duration: '0.8', delay: '0.4' } }}
                   exit={{ opacity: 0 }}
+                  loading='lazy'
                 />
               </div>
               <ul className='Slide-list'>

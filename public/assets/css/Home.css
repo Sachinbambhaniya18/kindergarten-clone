@@ -241,6 +241,8 @@
 
 .Underlay {
     background: #33415c;
+    height: 50%;
+    width: 100%;
     padding: 10px 10px 0;
     border-radius: 30px;
     position: relative;
