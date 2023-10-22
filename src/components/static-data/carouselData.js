@@ -23,4 +23,7 @@ export const items = [
         description: 'We make math fun and engaging for kids, helping them develop strong foundational math skills for the future.',
         link: 'https://www.youtube.com/embed/watch?v=CEm-wuaRz28&list=PL7pkSK1xbGD47-htL3ZMDXwOU_bnmS58c&index=6'
     },
+    {
+        link: '"https://www.youtube.com/embed/watch?v=Pyx3NG_OHlM&list=PL7pkSK1xbGD47-htL3ZMDXwOU_bnmS58c&index=8"'
+    },
 ]

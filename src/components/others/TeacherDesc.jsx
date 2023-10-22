@@ -4,9 +4,9 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { TeacherModal } from '../pages/Home';
 import VideoPlayer from '../modals/VideoPlayer';
 const TeacherDesc = () => {
-    const { isPlayerOpen, setIsPlayerOpen, handleVideoClose } = useContext(TeacherModal)
+    const { isPlayerOpenTwo, setIsPlayerOpenTwo, handleVideoClose } = useContext(TeacherModal)
     const handleOpenOnClick = () =>{
-        setIsPlayerOpen(true)
+        setIsPlayerOpenTwo(true)
         document.body.classList.add('Scroll-lock')
     }
   return (
@@ -20,7 +20,7 @@ const TeacherDesc = () => {
                             <FontAwesomeIcon icon={faPlay} size='l'></FontAwesomeIcon>
                         </button>
                         {
-                            isPlayerOpen && <VideoPlayer onClose={handleVideoClose} itemLink="https://www.youtube.com/embed/watch?v=Pyx3NG_OHlM&list=PL7pkSK1xbGD47-htL3ZMDXwOU_bnmS58c&index=8"/>
+                            isPlayerOpenTwo && <VideoPlayer onClose={handleVideoClose} itemLink="https://www.youtube.com/embed/watch?v=Pyx3NG_OHlM&list=PL7pkSK1xbGD47-htL3ZMDXwOU_bnmS58c&index=8"/>
                         }
                         </div>
                 </div>

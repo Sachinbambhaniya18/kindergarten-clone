@@ -1,4 +1,4 @@
-import React, { useState, createContext, useReducer, useContext } from 'react';
+import React, { useState, createContext, useContext, useReducer } from 'react';
 import Carousel from '../carousel/first-carousel/Carousel';
 import VideoPlayer from '../modals/VideoPlayer';
 import { items } from '../static-data/carouselData';
@@ -38,17 +38,21 @@ const Home = () => {
   const { heading } = useContext(HeadDataContext)
   const [state, dispatch] = useReducer(reducer, initial_state)
   const [isPlayerOpen, setIsPlayerOpen] = useState(false);
+  const [isPlayerOpenTwo, setIsPlayerOpenTwo] = useState(false);
+
 
   const handleVideoClose = () => {
     setIsPlayerOpen(false);
+    setIsPlayerOpenTwo(false)
     document.body.classList.remove('Scroll-lock')
   }
-  const item = items[state.currentIndex]
+
+  const item = items[state.currentIndex].link
 
   return (
-    <div className='Home-Page' id='section1'>
+    <div className='Home-Page'>
       {
-        isPlayerOpen && <VideoPlayer onClose={handleVideoClose} itemLink={item.link} />
+        isPlayerOpen && <VideoPlayer onClose={handleVideoClose} itemLink={item} />
       }
       <div className="Slider-wrapper">
         <div className="Slider-container">
@@ -60,8 +64,8 @@ const Home = () => {
               currentIndex: state.currentIndex
             }}>
               <Carousel
-                nextIndex={() => dispatch('nextIndex')}
-                prevIndex={() => dispatch('prevIndex')} />
+                nextIndex={()=> dispatch('nextIndex')}
+                prevIndex={()=> dispatch('prevIndex')} />
             </SliderContext.Provider>
           </div>
           <div className="Slider-image">
@@ -72,16 +76,16 @@ const Home = () => {
       <LearnAbout />
       <CardStructure subtitle={heading[0].subtitle} title={heading[0].title} content={heading[0].content} />
       <TeacherModal.Provider value={{
-        isPlayerOpen,
+        isPlayerOpenTwo,
         handleVideoClose,
-        setIsPlayerOpen
-        
+        setIsPlayerOpenTwo
+
       }}>
         <TeacherDesc />
       </TeacherModal.Provider>
       <Staff />
       <Enquiry />
-      <Heading title="Interesting Articles Updated Daily" subtitle="Together We Can Create" styleValue={{display: 'none'}}/>
+      <Heading title="Interesting Articles Updated Daily" subtitle="Together We Can Create" styleValue={{ display: 'none' }} />
     </div>
   )
 }

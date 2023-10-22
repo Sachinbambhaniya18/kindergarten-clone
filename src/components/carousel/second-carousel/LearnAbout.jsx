@@ -24,10 +24,9 @@ const LearnAbout = () => {
                   key={activeIndex}
                   src={images[activeIndex]}
                   alt="Carousel image.jpg"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1, transition: { duration: '0.8', delay: '0.4' } }}
-                  exit={{ opacity: 0 }}
-                  loading='lazy'
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1, transition: { duration: '0.5', delay: '0.2' } }}
+                  exit={{ scale: 0 }}
                 />
               </div>
               <ul className='Slide-list'>
