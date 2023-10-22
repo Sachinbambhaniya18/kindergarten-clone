@@ -15,7 +15,6 @@ function ScrollToTopButton() {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        // Show or hide the button based on scroll position
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
@@ -33,7 +32,7 @@ function ScrollToTopButton() {
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth',
+            behavior: 'smooth'
         });
     };
 

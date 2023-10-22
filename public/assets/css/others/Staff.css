@@ -189,6 +189,7 @@
 
         &:hover {
             letter-spacing: 2px;
+            
         }
     }
 }
@@ -200,11 +201,11 @@
     }
 
     .Teacher-container {
-        max-width: 300px;
+        max-width: 310px !important;
     }
 
     .Social-links ul {
-        padding-inline: 46px !important;
+        padding-inline: 49.2px !important;
     }
 }
 

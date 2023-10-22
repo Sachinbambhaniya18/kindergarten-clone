@@ -7,6 +7,8 @@ import CardStructure from '../cards/class-structure/CardStructure';
 import { HeadDataContext } from '../navigation/Navbar';
 import TeacherDesc from '../others/TeacherDesc';
 import Staff from '../others/staff-grid/Staff';
+import Enquiry from '../others/Enquiry';
+import Heading from '../others/Heading';
 
 export const SliderContext = createContext()
 export const TeacherModal = createContext()
@@ -78,6 +80,8 @@ const Home = () => {
         <TeacherDesc />
       </TeacherModal.Provider>
       <Staff />
+      <Enquiry />
+      <Heading title="Interesting Articles Updated Daily" subtitle="Together We Can Create" styleValue={{display: 'none'}}/>
     </div>
   )
 }

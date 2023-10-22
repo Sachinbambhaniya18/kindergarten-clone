@@ -3,19 +3,23 @@
     margin-top: 100px;
     margin-bottom: 100px;
 }
-.Class-decor{
+
+.Class-decor {
     position: absolute;
     right: -20%;
     top: 20%;
-    
-    & img{
+
+    & img {
         vertical-align: middle;
         height: 1037px;
         width: 564px;
     }
 }
+
 .Class-card-container {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -25,8 +29,8 @@
 .Header {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    margin-right: auto;
+    margin-left: auto;
 
     & .Header-wrapper {
         position: relative;
@@ -215,7 +219,8 @@
                 height: 50px;
                 align-items: center;
                 margin-top: 20px;
-                &::after{
+
+                &::after {
                     position: absolute;
                     content: '';
                     background-color: #33415c;
@@ -224,14 +229,17 @@
                     scale: 0;
                     transition: all 300ms linear;
                 }
-                &:hover::after{
+
+                &:hover::after {
                     scale: 1;
                 }
-                &:hover{
+
+                &:hover {
                     color: #fff;
-                    
+
                 }
-                & svg{
+
+                & svg {
                     margin-left: 22px;
                 }
             }
@@ -240,11 +248,21 @@
 }
 
 @media screen and (min-width: 320px) {
-    .Name a{
-        width: 80% !important;
+    .Btn-row{
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
+    .Name a {
+        width: 100% !important;
+        margin-top: auto !important;
+        margin-bottom: auto !important;
+    }
+
     .Class-card-container {
         max-width: 340px;
+        
     }
 
     .Classes-Card {
@@ -252,11 +270,22 @@
     }
 
     .Header {
-        flex: 100%;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+
+        & .Header-wrapper{
+            width: 100% !important;
+        }
+        & .Header-title {
+            font-size: 26px !important;
+            line-height: 30px !important;
+        }
     }
-    .Class-decor{
+
+    .Class-decor {
         right: 20%;
     }
+
 }
 
 @media screen and (min-width: 576px) {
@@ -267,7 +296,11 @@
     .Classes-Card {
         flex: 50%;
     }
-    .Name a{
+    .Header{
+        max-width: 542px !important;
+    }
+
+    .Name a {
         width: 50% !important;
     }
 }
@@ -276,11 +309,24 @@
     .Class-card-container {
         max-width: 720px;
     }
-    .Name a{
+
+    .Name a {
         width: 50% !important;
     }
-    .Class-decor{
+
+    .Class-decor {
         right: -20%;
+    }
+    .Header{
+        max-width: 720px !important;
+    }
+
+    .Header .Header-title {
+        font-size: 35px !important;
+        line-height: 45px !important;
+    }
+    .Header .Header-wrapper{
+        width: 80% !important;
     }
 
 }
@@ -293,16 +339,29 @@
     .Classes-Card {
         flex: 33%;
     }
-    .Name a{
+
+    .Name a {
         width: 34% !important;
     }
+    .Header{
+        max-width: 960px !important;
+    }
+    .Header .Header-title {
+        font-size: 48px !important;
+        line-height: 56px !important;
+    }
+
 }
 
 @media screen and (min-width: 1200px) {
     .Class-card-container {
         max-width: 92%;
     }
-    .Name a{
+
+    .Name a {
         width: 26% !important;
+    }
+    .Header{
+        max-width: 1140px !important;
     }
 }
