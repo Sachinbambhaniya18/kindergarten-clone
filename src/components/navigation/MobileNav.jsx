@@ -3,7 +3,7 @@ import { navPaths, pagePaths } from '../static-data/PagePaths'
 import { NavLink, Link } from 'react-router-dom'
 import { motion as m } from 'framer-motion'
 
-const MobileNav = () => {
+const MobileNav = ({ onClose }) => {
     return (
         <m.ul className='Mob-options'
         initial={{translateX: '100%'}}
@@ -16,7 +16,7 @@ const MobileNav = () => {
                 navPaths.map((navPage) => {
                     return (
                         <li className={({ isActive }) => (isActive ? 'Active-d' : null)}>
-                            <NavLink to={navPage.path} >{navPage.name}</NavLink>
+                            <NavLink to={navPage.path} onClick={onClose}>{navPage.name}</NavLink>
                         </li>
                     )
                 })
@@ -29,7 +29,7 @@ const MobileNav = () => {
                         pagePaths.map((page) => {
                             return (
                                 <li>
-                                    <NavLink to={page.path} className={({ isActive }) => (isActive ? 'Active-d' : null)}>{page.name}</NavLink>
+                                    <NavLink to={page.path} onClick={onClose} className={({ isActive }) => (isActive ? 'Active-d' : null)}>{page.name}</NavLink>
                                 </li>
                             )
                         })

@@ -73,7 +73,7 @@ const Navbar = () => {
               <span></span>
             </div>
             {
-              isNavOpen && <MobileNav />
+              isNavOpen && <MobileNav onClose={handleNavClose}/>
             }
             {
               isNavOpen && (
