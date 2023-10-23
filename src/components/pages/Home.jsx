@@ -8,7 +8,8 @@ import { HeadDataContext } from '../navigation/Navbar';
 import TeacherDesc from '../others/TeacherDesc';
 import Staff from '../others/staff-grid/Staff';
 import Enquiry from '../others/Enquiry';
-import Heading from '../others/Heading';
+import Article from '../others/article-grid/Article';
+import NewsLetter from '../others/NewsLetter';
 
 export const SliderContext = createContext()
 export const TeacherModal = createContext()
@@ -64,8 +65,8 @@ const Home = () => {
               currentIndex: state.currentIndex
             }}>
               <Carousel
-                nextIndex={()=> dispatch('nextIndex')}
-                prevIndex={()=> dispatch('prevIndex')} />
+                nextIndex={() => dispatch('nextIndex')}
+                prevIndex={() => dispatch('prevIndex')} />
             </SliderContext.Provider>
           </div>
           <div className="Slider-image">
@@ -79,13 +80,13 @@ const Home = () => {
         isPlayerOpenTwo,
         handleVideoClose,
         setIsPlayerOpenTwo
-
       }}>
         <TeacherDesc />
       </TeacherModal.Provider>
       <Staff />
       <Enquiry />
-      <Heading title="Interesting Articles Updated Daily" subtitle="Together We Can Create" styleValue={{ display: 'none' }} />
+      <Article />
+      <NewsLetter />
     </div>
   )
 }

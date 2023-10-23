@@ -96,9 +96,7 @@ const Navbar = () => {
 
         </div>
         <HeadDataContext.Provider value={{ heading: heading }}>
-          <div className="Page-routes">
             <PageRoutes />
-          </div>
         </HeadDataContext.Provider>
       </nav>
     </header>
