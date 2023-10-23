@@ -206,6 +206,7 @@
 
 .Mob-options{
     position: fixed;
+    overflow-y: scroll !important;
     top: 0;
     left: 0;
     z-index: 30;

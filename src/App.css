@@ -10,9 +10,7 @@ button:focus{
   outline: none;
 }
 .App{
-    overflow-x: hidden !important;
-    
-    
+    overflow-x: hidden !important;   
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -33,7 +31,7 @@ button:focus{
 }
 
 .Scroll-lock{
-    overflow: hidden;
+    overflow-y: hidden !important;
 }
 .scroll-to-top-button {
     display: none;
