@@ -482,9 +482,11 @@
         }
     }
 }
-.Article-wrapper{
+
+.Article-wrapper {
     padding-bottom: 100px;
 }
+
 .Article-container {
     width: 100%;
     padding-right: 15px;
@@ -496,7 +498,7 @@
         width: 100%;
     }
 
-    & .Header{
+    & .Header {
         margin-bottom: 40px;
     }
 
@@ -506,7 +508,7 @@
         margin-left: -15px;
         margin-right: -15px;
         /* margin-top: 50px; */
-        
+
 
         & .Blog-wrapper {
             position: relative;
@@ -518,9 +520,9 @@
                 margin-bottom: 35px;
                 transition: all .2s linear;
 
-                &:hover{
+                &:hover {
                     border-bottom: 2px solid #ff564f;
-                    margin-top :-5px;
+                    margin-top: -5px;
                     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
                 }
 
@@ -565,6 +567,125 @@
                 }
             }
 
+        }
+    }
+}
+
+.Newsletter-wrapper {
+    background: #33415c;
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden !important;
+
+    &::before {
+        display: none;
+        position: absolute;
+        content: url('/assets/svg/Docs.svg');
+        right: -4%;
+        top: 0;
+        transform: scale(.6);
+    }
+
+    &::after {
+        display: none;
+        position: absolute;
+        content: url('/assets/svg/Paperplane.svg');
+        left: -4%;
+        top: 20%;
+        transform: scale(.6);
+    }
+
+    & .Newsletter-container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+
+        & .Newsletter-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+
+            & .Newsletter-col {
+                position: relative;
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 15px;
+                text-align: center;
+
+                & .Newsletter-content {
+                    color: #fff;
+                    padding-bottom: 25px;
+
+                    & h2 {
+                        font-size: 48px;
+                        line-height: 56px;
+                        font-weight: 700;
+
+                    }
+                }
+
+                & form {
+                    display: flex !important;
+                    flex-flow: row wrap;
+                    align-items: center;
+                    justify-content: center;
+
+                    & .Form-controls {
+                        position: relative;
+                        width: 38%;
+                        z-index: 1;
+
+                        & input {
+                            padding: 20px;
+                            height: 42px;
+                            overflow: visible;
+                            border-radius: 30px;
+                            width: 100%;
+                            font-size: 1rem;
+                            font-weight: 400;
+                            line-height: 1.5;
+                            color: #495057;
+                            border: 1px solid #ced4da;
+                            transition: box-shadow .15s ease-in-out;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            content: url('/assets/svg/Planedecor.svg');
+                            z-index: -1;
+                            left: -440px;
+                            top: 50px;
+                            rotate: -10deg;
+                        }
+
+                        & button {
+                            background: #235c51;
+                            color: #fff;
+                            position: absolute;
+                            top: -1px;
+                            right: -1%;
+                            height: 44px;
+                            width: 30%;
+                            border-radius: 30px;
+                            font-weight: 400;
+                            border: none;
+                            cursor: pointer;
+                            font-size: 1rem;
+                            transition: all .2s linear;
+
+                            &:hover {
+                                background-color: #ff564f;
+                                box-shadow: rgba(255, 86, 79, 0.1) 0px 1px 0px,
+                                    rgba(255, 86, 79, 0.1) 0px 8px 24px,
+                                    rgba(255, 86, 79, 0.1) 0px 16px 48px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -664,7 +785,8 @@
     }
 
     .Enquiry-container,
-    .Article-container {
+    .Article-container,
+    .Newsletter-container {
         max-width: 320px !important;
     }
 
@@ -683,6 +805,33 @@
 
     }
 
+    .Newsletter-wrapper {
+        padding: 30px 0 !important;
+    }
+
+    .Newsletter-content h2 {
+        font-size: 26px !important;
+        line-height: 30px !important;
+    }
+
+    .Form-controls {
+        width: 100% !important;
+
+        & button {
+            width: 40% !important;
+        }
+    }
+
+}
+
+@media screen and (min-width: 576px) {
+    .Form-controls {
+        display: flex !important;
+        align-items: center;
+        margin-bottom: 0;
+        flex: 0 0 auto;
+        flex-flow: row wrap;
+    }
 }
 
 @media screen and (min-width : 768px) {
@@ -764,15 +913,13 @@
     .Enquiry-wrapper {
         margin-left: auto !important;
         margin-right: auto !important;
-        /* margin-top: 30px !important; */
-        /* padding: 30px 0 !important; */
-        /* padding-top: 100px !important; */
         padding: 100px !important;
 
     }
 
     .Enquiry-container,
-    .Article-container {
+    .Article-container,
+    .Newsletter-container {
         max-width: 720px !important;
     }
 
@@ -795,6 +942,24 @@
         flex: 0 0 50% !important;
         max-width: 50% !important;
     }
+
+    .Newsletter-wrapper {
+        padding: 50px 0 !important;
+    }
+
+    .Newsletter-content h2 {
+        font-size: 35px !important;
+        line-height: 45px !important;
+    }
+
+    .Form-controls {
+        width: 55% !important;
+
+        & button {
+            width: 30% !important;
+        }
+    }
+
 }
 
 
@@ -838,7 +1003,8 @@
     }
 
     .Enquiry-container,
-    .Article-container {
+    .Article-container,
+    .Newsletter-container {
         max-width: 960px !important;
 
         & .Enquiry-content {
@@ -861,16 +1027,50 @@
         flex: 0 0 33.33% !important;
         max-width: 33.33% !important;
     }
+
+    .Newsletter-wrapper {
+        padding: 60px 0 !important;
+    }
+
+    .Newsletter-wrapper::after,
+    .Newsletter-wrapper::before {
+        display: block;
+    }
+
+    .Newsletter-wrapper::after {
+        top: 25px !important;
+        left: -80px !important;
+    }
+
+    .Newsletter-wrapper::before {
+        bottom: 12px !important;
+        right: -85px !important;
+    }
+
+    .Newsletter-content h2 {
+        font-size: 48px !important;
+        line-height: 56px !important;
+    }
+
+    .Form-controls {
+        width: 38% !important;
+    }
 }
 
 @media screen and (min-width: 1200px) {
 
-    .Enquiry-container{
+    .Enquiry-container {
         max-width: 1140px !important;
     }
-    .Article-container{
+
+    .Article-container {
         max-width: 98% !important;
     }
+
+    .Newsletter-container {
+        max-width: 1470px !important;
+    }
+
     .Enquiry-wrapper::after {
         left: -12% !important;
         top: 20% !important;
@@ -880,4 +1080,19 @@
         flex: 0 0 25% !important;
         max-width: 25% !important;
     }
+
+    .Newsletter-wrapper {
+        padding: 100px 0 !important;
+    }
+
+    .Newsletter-wrapper::after {
+        top: 65px !important;
+        left: -80px !important;
+    }
+
+    .Newsletter-wrapper::before {
+        bottom: 12px !important;
+        right: -85px !important;
+    }
+
 }
