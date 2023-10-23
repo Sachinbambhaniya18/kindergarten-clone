@@ -7,6 +7,8 @@ import PageRoutes from './PageRoutes';
 import { navPaths, pagePaths } from '../static-data/PagePaths';
 import { heading } from '../static-data/heading-data';
 import MobileNav from './MobileNav';
+import { motion as m} from 'framer-motion';
+
 
 export const HeadDataContext = createContext()
 
@@ -74,9 +76,17 @@ const Navbar = () => {
             }
             {
               isNavOpen && (
-                <div className="exit-btn" onClick={handleNavClose}>
+                <m.div className="exit-btn" 
+                onClick={handleNavClose}
+                initial={{scale: 0}}
+                animate={{scale: 1, transition: {
+                  duration: 0.3,
+                  delay: 0.2
+                }}}
+                exit={{scale: 0}}
+                >
                   <FontAwesomeIcon icon={faClose} size='xl' color='#ffab4a' />
-                </div>
+                </m.div>
               )
             }
           </div>
