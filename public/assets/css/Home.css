@@ -650,6 +650,10 @@
                             color: #495057;
                             border: 1px solid #ced4da;
                             transition: box-shadow .15s ease-in-out;
+
+                            &:focus{
+                                outline: 1px solid rgb(163, 253, 255);
+                            }
                         }
 
                         &::after {
@@ -674,13 +678,12 @@
                             border: none;
                             cursor: pointer;
                             font-size: 1rem;
+                            transform-origin: center;
                             transition: all .2s linear;
 
                             &:hover {
                                 background-color: #ff564f;
-                                box-shadow: rgba(255, 86, 79, 0.1) 0px 1px 0px,
-                                    rgba(255, 86, 79, 0.1) 0px 8px 24px,
-                                    rgba(255, 86, 79, 0.1) 0px 16px 48px;
+                                box-shadow: rgb(255, 86, 79) 0px 0px 60px -10px;
                             }
                         }
                     }
