@@ -51,6 +51,7 @@ button:focus{
   
   .scroll-to-top-button.visible {
     display: block;
+    transition: all .3s linear;
   }
   
   .scroll-to-top-button:hover {

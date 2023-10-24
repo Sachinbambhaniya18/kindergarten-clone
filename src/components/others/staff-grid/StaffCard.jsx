@@ -1,8 +1,6 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faInstagram, faLinkedinIn, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { staffData } from '../../static-data/staffData';
-
+import { Facebook, Instagram, Twitter, LinkedIn } from '../footer/footerSvg';
 const StaffCard = () => {
     return (
         <>
@@ -21,23 +19,23 @@ const StaffCard = () => {
                                     <div className="Social-links">
                                         <ul>
                                             <li>
-                                                <a href="https://www.facebook.com" className='facebook'>
-                                                    <FontAwesomeIcon icon={faFacebookF} color='#4267B2'/>
+                                                <a href="https://www.facebook.com" className="Social-icons facebook-link">
+                                                    <Facebook />
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.twitter.com" className='twitter'>
-                                                    <FontAwesomeIcon icon={faXTwitter} color='#000'/>
+                                                <a href="https://www.twitter.com" className="Social-icons twitter-link">
+                                                    <Twitter />
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com" className='linkedin'>
-                                                    <FontAwesomeIcon icon={faLinkedinIn} color='#0077B5'/>
+                                                <a href="https://www.linkedin.com" className="Social-icons linkedin-link">
+                                                    <LinkedIn />
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://www.instagram.com/" className='instagram'>
-                                                    <FontAwesomeIcon icon={faInstagram} color='#FD1D1D'/>
+                                                <a href="https://www.instagram.com/" className="Social-icons instagram-link">
+                                                    <Instagram />
                                                 </a>
                                             </li>
                                         </ul>

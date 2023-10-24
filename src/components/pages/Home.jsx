@@ -10,6 +10,7 @@ import Staff from '../others/staff-grid/Staff';
 import Enquiry from '../others/Enquiry';
 import Article from '../others/article-grid/Article';
 import NewsLetter from '../others/NewsLetter';
+import Footer from '../others/footer/Footer';
 
 export const SliderContext = createContext()
 export const TeacherModal = createContext()
@@ -87,6 +88,7 @@ const Home = () => {
       <Enquiry />
       <Article />
       <NewsLetter />
+      <Footer />
     </div>
   )
 }
