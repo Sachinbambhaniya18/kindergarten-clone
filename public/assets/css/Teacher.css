@@ -1,8 +1,16 @@
-.Teacher-Page{
+.Teacher-Page {
     margin-top: 6rem;
 }
 
 /* Detail Page css */
-.Teach-Details{
+.Teach-Details {
     margin-top: 6rem;
+
+    & .Path-section {
+        & ul {
+            & li:nth-child(2)::after {
+                width: 24% !important;
+            }
+        }
+    }
 }

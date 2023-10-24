@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Header = ({ heading, firstPath, secondPath, thirdPath, linkPathOne, linkPathTwo, styleProp }) => {
+const Header = ({ heading, secondPath, thirdPath, linkPathOne, linkPathTwo, styleProp }) => {
   return (
     <div className='Path-wrapper'>
         <div className="Path-container">
@@ -9,7 +9,7 @@ const Header = ({ heading, firstPath, secondPath, thirdPath, linkPathOne, linkPa
                     <div className="Path-section">
                         <h2>{heading}</h2>
                         <ul>
-                            <li><a href="/">{firstPath}</a></li>
+                            <li><a href="/">Home</a></li>
                             <li><a href={linkPathOne}>{secondPath}</a></li>
                             <li style={styleProp}><a href={linkPathTwo}>{thirdPath}</a></li>
                         </ul>

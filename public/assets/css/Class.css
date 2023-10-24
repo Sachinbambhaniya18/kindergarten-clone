@@ -5,4 +5,11 @@
 /* Detail Page css */
 .Class-Details{
     margin-top: 6rem;
+    & .Path-section {
+        & ul{
+            & li:nth-child(2)::after{
+                width: 26% !important;
+            }
+        }
+    }
 }

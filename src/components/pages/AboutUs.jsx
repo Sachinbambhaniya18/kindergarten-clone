@@ -8,7 +8,7 @@ import Header from '../others/Header';
 const AboutUs = () => {
   return (
     <div className='About-Page'>
-      <Header styleProp={{display : 'none'}} heading='About Us' firstPath='Home' secondPath='About Us' linkPathOne='/aboutus'/>
+      <Header styleProp={{display : 'none'}} heading='About Us' secondPath='About Us' linkPathOne='/aboutus'/>
       <LearnAbout />
       <TeacherDesc />
       <Staff />
