@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = ({ heading, secondPath, thirdPath, linkPathOne, linkPathTwo, styleProp }) => {
   return (
@@ -9,9 +10,9 @@ const Header = ({ heading, secondPath, thirdPath, linkPathOne, linkPathTwo, styl
                     <div className="Path-section">
                         <h2>{heading}</h2>
                         <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href={linkPathOne}>{secondPath}</a></li>
-                            <li style={styleProp}><a href={linkPathTwo}>{thirdPath}</a></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to={linkPathOne}>{secondPath}</Link></li>
+                            <li style={styleProp}><Link to={linkPathTwo}>{thirdPath}</Link></li>
                         </ul>
                     </div>
                 </div>
