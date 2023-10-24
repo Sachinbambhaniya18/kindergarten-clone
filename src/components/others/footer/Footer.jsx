@@ -67,7 +67,7 @@ const Footer = () => {
                 </div>
                 <div className="Footer-row">
                     <div className="Bottom-col">
-                        <p>©2023 - Sachin, Developer | Devdesign Studio, Designer</p>
+                        <p>©2023 - Sachin Bambhaniya, Developer | Devdesign Studio, Designer</p>
                     </div>
                 </div>
             </div>
