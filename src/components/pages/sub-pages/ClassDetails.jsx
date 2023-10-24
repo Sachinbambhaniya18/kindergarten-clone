@@ -5,7 +5,7 @@ import Header from '../../others/Header'
 const ClassDetails = () => {
   return (
     <div className='Class-Details'>
-      <Header styleProp={{ display: 'list-item' }} heading='Class Details' secondPath='Class' thirdPath='Class Details' linkPathOne='/classes' linkPathTwo='/class/details'/>
+      <Header styleProp={{ display: 'list-item' }} heading='Classes' secondPath='Classes' thirdPath='Details' linkPathOne='/classes' linkPathTwo='/class/details'/>
       <Footer />
     </div>
   )
