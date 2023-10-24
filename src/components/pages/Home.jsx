@@ -13,7 +13,6 @@ import NewsLetter from '../others/NewsLetter';
 import Footer from '../others/footer/Footer';
 
 export const SliderContext = createContext()
-export const TeacherModal = createContext()
 const initial_state = {
   currentIndex: 0,
   key: 0
@@ -40,12 +39,10 @@ const Home = () => {
   const { heading } = useContext(HeadDataContext)
   const [state, dispatch] = useReducer(reducer, initial_state)
   const [isPlayerOpen, setIsPlayerOpen] = useState(false);
-  const [isPlayerOpenTwo, setIsPlayerOpenTwo] = useState(false);
 
 
   const handleVideoClose = () => {
     setIsPlayerOpen(false);
-    setIsPlayerOpenTwo(false)
     document.body.classList.remove('Scroll-lock')
   }
 
@@ -77,13 +74,7 @@ const Home = () => {
       </div>
       <LearnAbout />
       <CardStructure subtitle={heading[0].subtitle} title={heading[0].title} content={heading[0].content} />
-      <TeacherModal.Provider value={{
-        isPlayerOpenTwo,
-        handleVideoClose,
-        setIsPlayerOpenTwo
-      }}>
-        <TeacherDesc />
-      </TeacherModal.Provider>
+      <TeacherDesc />
       <Staff />
       <Enquiry />
       <Article />

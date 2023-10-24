@@ -1,9 +1,18 @@
 import React from 'react'
+import Footer from '../others/footer/Footer';
+import LearnAbout from '../carousel/second-carousel/LearnAbout';
+import TeacherDesc from '../others/TeacherDesc';
+import Staff from '../others/staff-grid/Staff';
+import Header from '../others/Header';
 
 const AboutUs = () => {
   return (
     <div className='About-Page'>
-      About Us
+      <Header styleProp={{display : 'none'}} heading='About Us' firstPath='Home' secondPath='About Us' linkPathOne='/aboutus'/>
+      <LearnAbout />
+      <TeacherDesc />
+      <Staff />
+      <Footer />
     </div>
   )
 }
