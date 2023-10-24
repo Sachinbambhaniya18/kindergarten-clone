@@ -25,7 +25,6 @@ export const CarouselItem = ({ indexValue, keyProp }) => {
                     type: 'spring', stiffness: 300, damping: 40
                 }
             }}
-            // exit={{ translateX: '100%' }}
         >
             <button className="Video-modal" onClick={handleVideoOpen}>
                 <FontAwesomeIcon icon={faPlay} size="l" />

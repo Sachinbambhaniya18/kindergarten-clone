@@ -23,13 +23,13 @@ const reducer = (state, action) => {
       return {
         ...state,
         currentIndex: (state.currentIndex + 1) % items.length,
-        key: (state.key + 1)
+        key: (state.key + 1) % 4
       }
     case 'prevIndex':
       return {
         ...state,
         currentIndex: (state.currentIndex - 1 + items.length) % items.length,
-        key: (state.key - 1)
+        key: (state.key - 1 + 4) % 4
       }
     default:
       return initial_state
