@@ -154,41 +154,39 @@
                     }
                 }
             }
-
-            & .Enroll-btn a {
-                color: #ff564f;
-                text-decoration: none;
-                position: relative;
-                font-weight: 600;
-
-                &::after {
-                    position: absolute;
-                    content: "";
-                    width: 0;
-                    height: 2px;
-                    background: #ff564f;
-                    left: 0;
-                    bottom: -2px;
-                    transition: all .3s linear;
-                }
-
-                & svg {
-                    margin-left: 30px;
-                    transition: all 300ms linear;
-                }
-
-                &:hover::after {
-                    width: 100%;
-                }
-
-                &:hover svg {
-                    margin-left: 15px;
-                }
-            }
         }
     }
 }
+.Enroll-btn a {
+    color: #ff564f;
+    text-decoration: none;
+    position: relative;
+    font-weight: 600;
 
+    &::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        background: #ff564f;
+        left: 0;
+        bottom: -2px;
+        transition: all .3s linear;
+    }
+
+    & svg {
+        margin-left: 30px;
+        transition: all 300ms linear;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
+    &:hover svg {
+        margin-left: 15px;
+    }
+}
 .Btn-row {
     display: flex;
     flex-wrap: wrap;
