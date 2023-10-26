@@ -1,7 +1,6 @@
 .Footer-wrapper {
     background: #212529;
     color: #fff;
-    padding-top: 100px;
 
     & .Footer-container {
         width: 100%;
@@ -98,9 +97,13 @@
 }
 
 @media screen and (min-width: 320px) {
+    .Footer-wrapper{
+        padding-top: 30px;
+    }
     .Footer-container {
         max-width: 310px;
     }
+
 
     .Footer-col {
         flex: 0 0 100% !important;
@@ -109,12 +112,16 @@
 }
 
 @media screen and (min-width: 576px) {
+    
     .Footer-container {
         max-width: 546px;
     }
 }
 
 @media screen and (min-width: 768px) {
+    .Footer-wrapper{
+        padding-top: 60px;
+    }
     .Footer-container {
         max-width: 720px;
     }
@@ -132,6 +139,9 @@
 }
 
 @media screen and (min-width: 1200px) {
+    .Footer-wrapper{
+        padding-top: 100px;
+    }
     .Footer-container {
         max-width: 1200px;
     }

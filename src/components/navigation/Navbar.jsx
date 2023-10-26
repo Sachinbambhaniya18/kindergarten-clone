@@ -8,6 +8,7 @@ import { navPaths, pagePaths } from '../static-data/PagePaths';
 import { heading } from '../static-data/heading-data';
 import MobileNav from './MobileNav';
 import { motion as m } from 'framer-motion';
+import ScrollToTop from './ScrollToTop';
 
 
 export const HeadDataContext = createContext()
@@ -97,6 +98,7 @@ const Navbar = () => {
         </div>
         <HeadDataContext.Provider value={{ heading: heading }}>
             <PageRoutes />
+            <ScrollToTop />
         </HeadDataContext.Provider>
       </nav>
     </header>
