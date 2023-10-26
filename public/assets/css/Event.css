@@ -1,17 +1,209 @@
-.Event-Page{
+.Event-Page {
     margin-top: 6rem;
+
+    & .Trip-wrapper {
+        padding: 100px 0;
+
+        & .Trip-container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+
+            & .Trip-row {
+                display: flex;
+                flex-wrap: wrap;
+                margin-right: -15px;
+                margin-left: -15px;
+
+                & .Trip-col {
+                    position: relative;
+                    width: 100%;
+                    padding-right: 15px;
+                    padding-left: 15px;
+
+                    & .Trip-card {
+                        box-shadow: 0 10px 35px 0 rgba(0, 0, 0, .1);
+                        background-color: #fff;
+                        padding: 35px;
+                        border-radius: 8px;
+                        transition: all .2s linear;
+
+                        & .Trip-icon {
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: #fff;
+                            font-size: 23px;
+                        }
+
+                        & .Icon-0 {
+                            background: #ffab4a;
+                        }
+
+                        & .Icon-1 {
+                            background: #235c51;
+                        }
+
+                        & .Icon-2 {
+                            background: #ff564f;
+                        }
+
+                        & .Icon-3 {
+                            background: #33415c;
+                        }
+
+                        & h5 {
+                            font-weight: 600;
+                            padding: 20px 0 8px;
+                            font-size: 1.25rem;
+                            line-height: 1.2;
+                        }
+
+                        & p {
+                            line-height: 28px;
+                            padding-bottom: 15px;
+
+                        }
+
+                        &:hover {
+                            border-bottom: 2px solid #ff564f;
+                            margin-top: -10px;
+                            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+                                rgba(17, 17, 26, 0.1) 0px 8px 24px,
+                                rgba(17, 17, 26, 0.1) 0px 16px 56px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & .Kids-wrapper {
+        padding-bottom: 40px;
+
+        & .Kids-container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+
+            & .Kids-row {
+                display: flex;
+                flex-wrap: wrap;
+                margin-right: -15px;
+                margin-left: -15px;
+
+                & .Kids-col {
+                    position: relative;
+                    width: 100%;
+                    padding-right: 15px;
+                    padding-left: 15px;
+
+                    & img{
+                        max-width: 100%;
+                        height: auto;
+                        vertical-align: middle;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    & .Slick-wrapper {
+        margin-top: 100px;
+    }
 }
 
 /* Detail Page css */
-.Event-Details{
+.Event-Details {
     margin-top: 6rem;
 
     & .Path-section {
-        & ul{
-            & li:nth-child(2)::after{
+        & ul {
+            & li:nth-child(2)::after {
                 width: 26% !important;
             }
         }
     }
 
+}
+
+
+
+@media screen and (min-width: 320px) {
+    .Trip-container {
+        max-width: 97%;
+    }
+
+    .Trip-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .Trip-card {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .Kids-container {
+        max-width: 540px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .Trip-container {
+        max-width: 720px;
+    }
+
+    .Trip-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+
+        & .Trip-card {
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+    }
+
+    .Kids-container {
+        max-width: 720px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .Trip-container {
+        max-width: 960px;
+    }
+
+    .Trip-col {
+        flex: 0 0 25%;
+        max-width: 25%;
+
+        & .Trip-card {
+            margin-bottom: 0px;
+        }
+    }
+
+    .Kids-container {
+        max-width: 960px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .Trip-container {
+        max-width: 1200px;
+    }
+
+    .Kids-container {
+        max-width: 100%;
+    }
 }
