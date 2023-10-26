@@ -1,10 +1,11 @@
 import React from 'react'
 import Footer from '../others/footer/Footer';
+import ErrorComponent from '../others/error/ErrorComponent';
 
 const NotFound = () => {
   return (
     <div className='Not-found'>
-      Not Found
+      <ErrorComponent />
       <Footer />
     </div>
   )
