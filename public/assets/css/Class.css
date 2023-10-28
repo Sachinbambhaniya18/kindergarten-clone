@@ -1,6 +1,9 @@
 .Class-Page{
     margin-top: 6rem;
 
+    & .Trip-wrapper{
+        padding-bottom: 0px;
+    }
 }
 
 /* Detail Page css */
