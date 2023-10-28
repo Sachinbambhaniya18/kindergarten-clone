@@ -29,8 +29,8 @@ const Footer = () => {
                                 </li>
                                 <li>
                                     <GitHub />
-                                    Link to Repo:
-                                    <a href="https://github.com/Sachinbambhaniya18/kindergarten-clone" target='blank'> https://github.com/Sachinbambhaniya18/kindergarten-clone</a>
+                                    Link to Repository:
+                                    <a href="https://github.com/Sachinbambhaniya18/kindergarten-clone" target='blank'> kindergarten-clone</a>
                                 </li>
                             </ul>
                             <ul className="Socials">

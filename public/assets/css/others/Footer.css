@@ -37,10 +37,11 @@
                         & svg {
                             margin-right: 10px;
                         }
-                        
+
                         & a{
                             text-decoration: none;
                             color: #fff;
+                            text-wrap: wrap;
                         }
 
                         & .email {
