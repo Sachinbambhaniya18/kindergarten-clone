@@ -1,5 +1,5 @@
 import React from 'react'
-import StaffFooter from '../StaffFooter'
+import StaffFooter from '../teacher/StaffFooter'
 import Heading from '../Heading'
 import { articles } from '../../static-data/articleData'
 import { Link } from 'react-router-dom'

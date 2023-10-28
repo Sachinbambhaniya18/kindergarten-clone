@@ -1,8 +1,10 @@
 import React from 'react'
 import Footer from '../others/footer/Footer'
-import Header from '../others/Header'
+import Header from '../others/header/Header'
 import LearnAbout from '../carousel/second-carousel/LearnAbout'
 import TripEvents from '../event-components/trip/TripEvents'
+import Counter from '../others/eventPage/Counter'
+import BlogEvent from '../event-blogs/BlogEvent'
 
 const Events = () => {
   return (
@@ -18,7 +20,9 @@ const Events = () => {
           </div>
         </div>
       </div>
+      <BlogEvent />
       <LearnAbout />
+      <Counter />
       <Footer />
     </div>
   )

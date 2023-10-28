@@ -1,5 +1,71 @@
 .Teacher-Page {
     margin-top: 6rem;
+
+    & .Teacher-grid-wrapper {
+        padding: 100px 0;
+
+        & .Teacher-grid-container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+
+            & .Teacher-grid-row {
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: -15px;
+                margin-right: -15px;
+
+                & .Teacher-grid-col {
+                    position: relative;
+                    width: 100%;
+                    padding-right: 15px;
+                    padding-left: 15px;
+                    
+                    & .Teacher-grid-img {
+                        position: relative;
+                        overflow: hidden;
+                        
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            left: 0;
+                            top: 0;
+                            background-image: linear-gradient(180deg, rgba(51, 65, 92, 0) 60%, #33415c);
+                        }
+
+                        
+                        & img {
+                            width: 100%;
+                            vertical-align: middle;
+                            transition: all .2s linear;
+                        }
+                        &:hover img{
+                            scale: 1.1;
+                        }
+
+                        & h4 {
+                            position: absolute;
+                            left: 0;
+                            top: 80%;
+                            color: #fff;
+                            font-weight: 600;
+                            font-size: 1.5rem;
+                            line-height: 1.2;
+                            z-index: 2;
+                            width: 100%;
+                            display: inline-flex;
+                            justify-content: center;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Detail Page css */
@@ -12,5 +78,45 @@
                 width: 24% !important;
             }
         }
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .Teacher-grid-container{
+        max-width: 310px;
+    }
+    .Teacher-grid-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .Teacher-grid-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .Teacher-grid-container{
+        max-width: 720px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .Teacher-grid-col {
+        flex: 0 0 33%;
+        max-width: 33%;
+    }
+    .Teacher-grid-container{
+        max-width: 960px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .Teacher-grid-col {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .Teacher-grid-container{
+        max-width: 1250px;
     }
 }

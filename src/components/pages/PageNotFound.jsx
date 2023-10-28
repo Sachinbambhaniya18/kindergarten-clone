@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from '../others/footer/Footer';
-import ErrorComponent from '../others/error/ErrorComponent';
+import ErrorComponent from '../others/errorComponent/ErrorComponent';
 
 const NotFound = () => {
   return (

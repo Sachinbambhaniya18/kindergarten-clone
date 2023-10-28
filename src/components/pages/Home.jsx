@@ -5,11 +5,11 @@ import { items } from '../static-data/carouselData';
 import LearnAbout from '../carousel/second-carousel/LearnAbout';
 import CardStructure from '../cards/class-structure/CardStructure';
 import { HeadDataContext } from '../navigation/Navbar';
-import TeacherDesc from '../others/TeacherDesc';
+import TeacherDesc from '../others/teacher/TeacherDesc';
 import Staff from '../others/staff-grid/Staff';
-import Enquiry from '../others/Enquiry';
+import Enquiry from '../others/home/Enquiry';
 import Article from '../others/article-grid/Article';
-import NewsLetter from '../others/NewsLetter';
+import NewsLetter from '../others/home/NewsLetter';
 import Footer from '../others/footer/Footer';
 
 export const SliderContext = createContext()

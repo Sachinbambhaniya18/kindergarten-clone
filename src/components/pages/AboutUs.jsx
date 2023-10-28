@@ -1,9 +1,9 @@
 import React from 'react'
 import Footer from '../others/footer/Footer';
 import LearnAbout from '../carousel/second-carousel/LearnAbout';
-import TeacherDesc from '../others/TeacherDesc';
+import TeacherDesc from '../others/teacher/TeacherDesc';
 import Staff from '../others/staff-grid/Staff';
-import Header from '../others/Header';
+import Header from '../others/header/Header';
 
 const AboutUs = () => {
   return (

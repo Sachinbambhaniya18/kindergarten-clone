@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from '../others/footer/Footer'
-import Header from '../others/Header'
+import Header from '../others/header/Header'
 
 const Contact = () => {
   return (

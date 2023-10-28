@@ -2,7 +2,7 @@ import React from 'react'
 import { heading } from '../../static-data/heading-data'
 import Heading from '../Heading'
 import StaffCard from './StaffCard'
-import StaffFooter from '../StaffFooter'
+import StaffFooter from '../teacher/StaffFooter'
 
 
 const Staff = () => {
