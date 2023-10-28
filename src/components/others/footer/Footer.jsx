@@ -25,7 +25,7 @@ const Footer = () => {
                                 </li>
                                 <li>
                                     <Clock />
-                                    Working Days: 9am - 5am, Monday - Friday.
+                                    Working Days: 9am - 5pm, Monday - Friday.
                                 </li>
                             </ul>
                             <ul className="Socials">
