@@ -1,5 +1,5 @@
 import React from 'react'
-import { Clock, Email, House, PhoneCall, Facebook, Twitter, Instagram, LinkedIn } from './footerSvg'
+import { Clock, Email, House, PhoneCall, Facebook, Twitter, Instagram, LinkedIn, GitHub } from './footerSvg'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
@@ -27,6 +27,10 @@ const Footer = () => {
                                     <Clock />
                                     Working Days: 9am - 5pm, Monday - Friday.
                                 </li>
+                                <li>
+                                    <GitHub />
+                                    <a href="https://github.com/Sachinbambhaniya18/kindergarten-clone" target='blank'>https://github.com/Sachinbambhaniya18/kindergarten-clone</a>
+                                </li>
                             </ul>
                             <ul className="Socials">
                                 <li>
@@ -49,6 +53,7 @@ const Footer = () => {
                                         <Instagram />
                                     </a>
                                 </li>
+
                             </ul>
                         </div>
                     </div>
