@@ -32,7 +32,11 @@ const Navbar = () => {
       <nav className="Container">
         <div className="Wrapper">
           <div className="Logo">
-            <h1>Kindergarden</h1>
+            <h1>
+              <Link to='/'>
+              Kindergarden
+              </Link>
+              </h1>
           </div>
           <div className="Paths">
             <ul>

@@ -18,11 +18,15 @@
         justify-content: space-between;
 
         & .Logo h1 {
-            color: #564fff;
             font-family: 'Pacifico', cursive;
             font-weight: 500;
             font-size: 28px;
             margin-left: 1rem;
+            
+            & a{
+                color: #564fff;
+                text-decoration: none;
+            }
         }
 
         & .Paths {
