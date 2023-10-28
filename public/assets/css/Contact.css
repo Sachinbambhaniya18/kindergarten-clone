@@ -41,8 +41,7 @@
                         & .Contact-left,
                         .Contact-right {
                             background: #fff;
-                            box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
-
+                            box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
                             & .Contact-content {
                                 margin-bottom: 1rem;
 
@@ -66,7 +65,6 @@
 
                                 & input {
                                     display: block;
-                                    height: calc(1.5em + 0.75rem + 2px);
                                     width: 100%;
                                     padding: 0.375rem 0.75rem;
                                     font-size: 1rem;
