@@ -8,7 +8,6 @@
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -18,11 +17,10 @@
 .Slider-container {
     margin: 2rem 2rem 3rem 2rem;
     width: 100vw;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
 }
 
 .Slider-Holder {
@@ -41,8 +39,12 @@
     }
 
 }
+.Slider-controls{
+    z-index: 20;
+}
 
 .Slider-Holder {
+    /* overflow: hidden !important; */
     &::after {
         position: absolute;
         content: url('/assets/svg/TriangleUpsideDown.svg');
@@ -180,10 +182,13 @@
         background-color: #ff564f;
     }
 }
-
+.Slide-controls{
+    position: relative;
+    z-index: 2;
+}
 .right-btn,
 .left-btn {
-    top: 445px;
+    top: 60px !important;
 }
 
 .right-btn {
@@ -194,10 +199,14 @@
     left: 75px;
 }
 
-.Slider-image .kids-img {
-    width: 95%;
-    object-fit: cover;
+.Slider-image{
+    width: 80%;
 }
+.Slider-image .kids-img {
+    width: 100%;
+    object-fit: fill;
+}
+
 
 /* Section - 2 */
 
@@ -310,6 +319,7 @@
         right: 8%;
     }
 }
+
 
 .Section-title-container {
     padding: 0 78px 0 0;
@@ -695,8 +705,6 @@
 
 @media screen and (min-width : 320px) {
     .Slider-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
         margin-top: 20px !important;
     }
 
@@ -752,11 +760,17 @@
 
     .right-btn,
     .left-btn {
-        top: 475px;
+        top: 20px !important;
     }
 
+    .left-btn{
+        left: 10px;
+    }
+    .right-btn{
+        left: 80px;
+    }
     .Slider-image {
-        margin-top: auto;
+        margin-top: 75px;
     }
 
     .Slider-Holder::after {
@@ -838,11 +852,6 @@
 }
 
 @media screen and (min-width : 768px) {
-    .Slider-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-
-    }
 
     .Section-title-container {
         margin-top: 20px;
@@ -896,12 +905,7 @@
     }
 
     .Slider-container {
-        margin-top: 0 !important;
-    }
-
-    .right-btn,
-    .left-btn {
-        top: 445px;
+        margin-top: 30px !important;
     }
 
     .Slick-wrapper::after {
@@ -909,8 +913,14 @@
         right: 16% !important;
     }
 
+    .left-btn{
+        left: 60px;
+    }
+    .right-btn{
+        left: 120px;
+    }
     .Slider-image {
-        margin-top: 20px !important;
+        margin-top: 80px !important;
     }
 
     .Enquiry-wrapper {
@@ -962,17 +972,15 @@
             width: 30% !important;
         }
     }
-
+    
 }
 
 
 @media screen and (min-width : 992px) {
-    .Slider-container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-
+    .Slider-Holder,
+    .Slider-image{
+        flex: 0 0 50% !important;
     }
-
     .Section-title-container {
         margin-top: 0px !important;
     }
@@ -990,6 +998,16 @@
 
     .List-content {
         column-count: 2;
+    }
+    .Slider-Holder{
+        padding-bottom: 20px;
+    }
+    .right-btn,
+    .left-btn{
+        top: 10px !important;
+    }
+    .Slider-image {
+        margin-top: 0px !important;
     }
 
     .Slider-Holder::after {
@@ -1061,7 +1079,10 @@
 }
 
 @media screen and (min-width: 1200px) {
-
+    .right-btn,
+    .left-btn{
+        top: 50px !important;
+    }
     .Enquiry-container {
         max-width: 1140px !important;
     }

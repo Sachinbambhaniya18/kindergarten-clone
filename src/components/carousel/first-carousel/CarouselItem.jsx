@@ -16,13 +16,18 @@ export const CarouselItem = ({ indexValue, keyProp }) => {
 
     const item = items[indexValue];
     return (
+        <div style={{overflow: 'hidden'}}>
+
         <m.div className="Slider"
             key={keyProp}
-            initial={{ translateX: '-100%' }}
+            initial={{ translateY: '100%', opacity: 0 }}
             animate={{
-                translateX: '0',
+                translateY: '0',
+                opacity: 1,
                 transition: {
-                    type: 'spring', stiffness: 300, damping: 40
+                    // type: 'spring', stiffness: 300, damping: 40
+                    duration: 0.4,
+                    delay: 0.2
                 }
             }}
         >
@@ -46,7 +51,7 @@ export const CarouselItem = ({ indexValue, keyProp }) => {
             </Link>
             </div>
         </m.div>
-
+        </div>
     )
 }
 

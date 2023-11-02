@@ -6,11 +6,11 @@ import { motion as m } from 'framer-motion'
 const MobileNav = ({ onClose }) => {
     return (
         <m.ul className='Mob-options'
-        initial={{translateX: '100%'}}
-        animate={{translateX: 0, transition: {
+        initial={{translateX: '100%', opacity: 0}}
+        animate={{translateX: 0, opacity: 1, transition: {
             duration: 0.2
         }}}
-        exit={{translateX: '-100%'}}
+        exit={{translateX: '-100%', opacity: 0}}
         >
             {
                 navPaths.map((navPage) => {
