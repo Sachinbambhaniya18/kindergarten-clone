@@ -2,7 +2,6 @@ import React from 'react'
 import Footer from '../others/footer/Footer'
 import Header from '../others/header/Header'
 import { Clock, Email, House, PhoneCall } from '../others/footer/footerSvg'
-import { CaretRight } from '../cards/class-structure/CardSvg'
 
 const Contact = () => {
 

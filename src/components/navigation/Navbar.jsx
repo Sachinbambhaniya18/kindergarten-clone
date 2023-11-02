@@ -9,18 +9,17 @@ import { heading } from '../static-data/heading-data';
 import MobileNav from './MobileNav';
 import { motion as m } from 'framer-motion';
 import ScrollToTop from './ScrollToTop';
+import LoadingBar from 'react-top-loading-bar';
 
-
+export const LoadingContext = createContext()
 export const HeadDataContext = createContext()
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false)
-
+  const [progress, setProgress] = useState(0)
   const handleNavOpen = () => {
     setIsNavOpen(true)
-    
     document.body.classList.add('Scroll-lock')
-
   }
   const handleNavClose = () => {
     setIsNavOpen(false)
@@ -30,21 +29,46 @@ const Navbar = () => {
   return (
     <header className='Main-Header'>
       <nav className="Container">
+        <LoadingBar height={2.2}
+          shadow={true}
+          progress={progress}
+          color='#564fff'
+          waitingTime={300}
+          shadowStyle={{ boxShadow: 'rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;' }}
+        />
         <div className="Wrapper">
           <div className="Logo">
             <h1>
-              <Link to='/'>
-              Kindergarden
+              <Link to='/'
+              onClick={() => {
+                setProgress(20)
+                setInterval(() => {
+                  setProgress((prev) => {
+                    return prev > 100 ? prev + 20 : 100;
+                  })
+                }, 500);
+              }}>
+                Kindergarden
               </Link>
-              </h1>
+            </h1>
           </div>
           <div className="Paths">
             <ul>
               {
                 navPaths.map((navPage) => {
                   return (
-                    <li className={({ isActive }) => (isActive ? 'active' : null)}>
-                      <NavLink to={navPage.path} >{navPage.name}</NavLink>
+                    <li
+                      className={({ isActive }) => (isActive ? 'active' : null)}>
+                      <NavLink to={navPage.path}
+                        onClick={() => {
+                          setProgress(20)
+                          setInterval(() => {
+                            setProgress((prev) => {
+                              return prev > 100 ? prev + 20 : 100;
+                            })
+                          }, 500);
+                        }}
+                      >{navPage.name}</NavLink>
                     </li>
                   )
                 })
@@ -56,7 +80,18 @@ const Navbar = () => {
                     pagePaths.map((page) => {
                       return (
                         <li>
-                          <NavLink to={page.path} className={({ isActive }) => (isActive ? 'Active-d' : null)}>{page.name}</NavLink>
+                          <NavLink to={page.path}
+                            onClick={() => {
+                              setProgress(30)
+                              setInterval(() => {
+                                setProgress((prev) => {
+                                  if (prev < 100) {
+                                    return prev + 20
+                                  } else return 100
+                                })
+                              }, 800);
+                            }}
+                            className={({ isActive }) => (isActive ? 'Active-d' : null)}>{page.name}</NavLink>
                         </li>
                       )
                     })
@@ -78,7 +113,7 @@ const Navbar = () => {
               <span></span>
             </div>
             {
-              isNavOpen && <MobileNav onClose={handleNavClose}/>
+              isNavOpen && <MobileNav onClose={handleNavClose} />
             }
             {
               isNavOpen && (
@@ -98,11 +133,12 @@ const Navbar = () => {
               )
             }
           </div>
-
         </div>
         <HeadDataContext.Provider value={{ heading: heading }}>
+          <LoadingContext.Provider value={setProgress}>
             <PageRoutes />
-            <ScrollToTop />
+          </LoadingContext.Provider>
+          <ScrollToTop />
         </HeadDataContext.Provider>
       </nav>
     </header>
