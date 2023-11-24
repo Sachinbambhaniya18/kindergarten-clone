@@ -1,4 +1,4 @@
-# Kindergarten Website Clone
+# Kindergarten  Website Clone
 
 Welcome to the Kindergarten Website Clone project! This project is a clone of an existing kindergarten website, created for educational and portfolio purposes. It aims to replicate the design and functionality of the original website, showcasing web development skills.
 
