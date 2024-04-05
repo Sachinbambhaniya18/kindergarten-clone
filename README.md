@@ -32,9 +32,8 @@ To get started with the project, follow these steps:
 ## Disclaimer
 
 
-- Live Website
- https://kindergarten-clone-sable.vercel.app/
-
+- Live Website:
+[https://kindergarten-clone-sable.vercel.app/](https://kindergarten-clone-sable.vercel.app/)
 This project is not affiliated with or endorsed by the original website or its creators. It is intended for educational purposes and to showcase web development skills.
 
 For any questions, concerns, or inquiries, please contact at 
