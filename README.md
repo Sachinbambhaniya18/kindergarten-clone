@@ -1,4 +1,4 @@
-# Kindergarten Website Clone
+# Kindergarten  Website Clone
 
 Welcome to the Kindergarten Website Clone project! This project is a clone of an existing kindergarten website, created for educational and portfolio purposes. It aims to replicate the design and functionality of the original website, showcasing web development skills.
 
@@ -31,8 +31,11 @@ To get started with the project, follow these steps:
 
 ## Disclaimer
 
+- Live Website: [https://kindergarten-clone-sable.vercel.app/](https://kindergarten-clone-sable.vercel.app/)
 
 This project is not affiliated with or endorsed by the original website or its creators. It is intended for educational purposes and to showcase web development skills.
 
 For any questions, concerns, or inquiries, please contact at 
 [schnbambhaniya@gmail.com](mailto:schnbambhaniya@gmail.com.)
+
+
