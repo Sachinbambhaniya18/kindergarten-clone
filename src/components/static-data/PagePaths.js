@@ -3,26 +3,26 @@ export const pagePaths = [
         path: '/events',
         name: 'Events'
     },
-    {
-        path: '/event/details',
-        name: 'Event Details'
-    },
+    // {
+    //     path: '/event/details',
+    //     name: 'Event Details'
+    // },
     {
         path: '/classes',
         name: 'Classes'
     },
-    {
-        path: '/class/details',
-        name: 'Class Details'
-    },
+    // {
+    //     path: '/class/details',
+    //     name: 'Class Details'
+    // },
     {
         path: '/teachers',
         name: 'Teachers'
     },
-    {
-        path: '/teacher/details',
-        name: 'Teacher Details'
-    },
+    // {
+    //     path: '/teacher/details',
+    //     name: 'Teacher Details'
+    // },
     {
         path: '/aboutus',
         name: 'About Us'
