@@ -17,6 +17,7 @@ export const HeadDataContext = createContext()
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false)
   const [progress, setProgress] = useState(0)
+  
   const handleNavOpen = () => {
     setIsNavOpen(true)
     document.body.classList.add('Scroll-lock')
@@ -44,7 +45,7 @@ const Navbar = () => {
                 setProgress(20)
                 setInterval(() => {
                   setProgress((prev) => {
-                    return prev > 100 ? prev + 20 : 100;
+                    return prev < 100 ? prev + 20 : 100;
                   })
                 }, 500);
               }}>

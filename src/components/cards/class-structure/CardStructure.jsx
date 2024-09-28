@@ -15,7 +15,7 @@ const CardStructure = ({ subtitle, title, content }) => {
           {
             cards.map((card) => {
 
-              return <CardOne cardPrice={card.price} cardImage={card.src} cardTitle={card.title} />
+              return <CardOne cardPrice={card.price} cardImage={card.src} cardTitle={card.title} cardValue="value" />
             })
           }
         </div>
